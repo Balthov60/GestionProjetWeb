@@ -1,0 +1,122 @@
+/* Basic Class */
+
+.horizontal_layout
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.honrizontal_reverse_layout
+{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.vertical_layout
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.espaced
+{
+  justify-content: space-between;
+}
+
+.main_content
+{
+  width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+
+.title
+{
+  width: 40%;
+}
+
+/* Nav */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+/* history */
+
+.history
+{
+  
+}
+
+.photos
+{
+  width: 40%;
+  border: 1px solid;
+  margin: 10px 20px;
+}
+
+.history_text
+{
+  text-align: justify;
+  margin: 10px 20px;
+}
+
+/* menu */
+
+.menu
+{
+  align-items: center;
+}
+
+.menu nav
+{
+  width: 33%;
+}
+
+.menu nav ul
+{
+  justify-content: space-around;
+}
+
+.menu_text
+{
+  width: 33%;
+  border: 1px solid;
+  padding: 10px 20px;
+}
+
+/* access */
+
+.informations
+{
+  width: 50%;
+}
+
+.info
+{
+  border: 1px solid;
+  margin-right: 50px;
+}
+
+/* form */
+
+.informations_form
+{
+  width: 50%;
+}
+
+/* footer */
+
+footer
+{
+  text-align: center;
+}
