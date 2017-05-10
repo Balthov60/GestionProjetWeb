@@ -23,45 +23,114 @@
   justify-content: space-between;
 }
 
+.horizontal_separator
+{
+  width: 92%; 
+  height: 3px;
+  margin: auto;
+  background-color: #000000;
+}
+
+.vertical_separator
+{
+  width: 3px; 
+  height: 93%;
+  margin: auto;
+  background-color: #000000;
+}
+
+/* Main Items */
+
 .main_content
 {
   width: 1200px;
   margin: auto;
 }
 
+section
+{
+  width: 90%;
+  margin: auto;
+}
+
+a
+{
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Header */
+
+header
+{
+  border: 1px solid;
+}
 
 .title
 {
   width: 40%;
+  padding-left: 15px;
+  
+  display: flex;
+  align-items: center;
 }
 
-/* Nav */
+.title h1
+{
+  padding-left: 15px;
+}
+
+/* Nav Language */
+
+.language
+{
+  width: 10%;
+}
 
 nav ul
 {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
 }
 
 nav li
 {
-    margin-right: 15px;
+  margin-right: 5px;
 }
 
-/* history */
-
-.history
+.language ul li img
 {
-  
+  border-radius: 5px;
 }
+
+/* Main Navigation */
+
+.main_navigation
+{
+  width: 50%;
+  background-color: #EEEEEE;
+}
+
+.main_navigation a
+{
+  border-left: 1px solid;
+  flex-grow: 1;
+}
+
+/* history */ 
 
 .photos
 {
-  width: 40%;
+  width: 80%;
   border: 1px solid;
-  margin: 10px 20px;
+  margin: 25px 20px;
+  background-color: #EEEEEE;
 }
 
 .history_text
@@ -70,21 +139,49 @@ nav li
   margin: 10px 20px;
 }
 
+.history_text h2
+{
+  margin-bottom: 2px;
+}
+
+.history_text p
+{
+  margin-top: 2px;
+}
+
 /* menu */
 
 .menu
 {
   align-items: center;
+  border: 1px solid;
+  
+  padding: 20px 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  background-color: #EEEEEE;
 }
 
 .menu nav
 {
   width: 33%;
+  padding: 0 20px;
+  border: 1px solid;
+  justify-content: space-between;
+
+  background-color: #FFFFFF;
 }
 
-.menu nav ul
+.menu nav a
 {
-  justify-content: space-around;
+  flex-grow: 1;
+  padding: 5px 0px;
+}
+
+.menu nav a:nth-child(1), .menu nav a:nth-child(2)
+{
+  border-right: 1px solid;
 }
 
 .menu_text
@@ -92,19 +189,48 @@ nav li
   width: 33%;
   border: 1px solid;
   padding: 10px 20px;
+  
+  background-color: #FFFFFF;
 }
 
 /* access */
+
+.contact
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .informations
 {
   width: 50%;
 }
 
+.booking 
+{
+  width: 50%;
+  margin: auto;
+}
+
+/* informations */
+
+.map
+{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 .info
 {
+  width: 40%;
+  
+  background-color: white;
   border: 1px solid;
-  margin-right: 50px;
+
+  position: relative;
+  bottom: 180px;
+  
+  font-size: 0.7em;
 }
 
 /* form */
@@ -114,9 +240,31 @@ nav li
   width: 50%;
 }
 
+.infos_form
+{
+  text-align: center;
+  margin: auto;
+}
+
 /* footer */
 
 footer
 {
+  border: 1px solid;
+  border-radius: 0px 0px 10px 10px;
   text-align: center;
+}
+
+/* aside */
+
+#link_aside
+{
+  position: fixed;
+  top: 50%;
+  right: 0px;
+}
+
+#link_aside ul li
+{
+  margin-bottom: 10px;
 }
