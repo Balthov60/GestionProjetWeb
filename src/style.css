@@ -82,10 +82,15 @@ h1, h2
 	color: #BE1E30;
 }
 
-.main_navigation a:hover
+a:hover
 {
   color: #C59D5F;
   text-decoration: underline;
+}
+
+.menu nav a:nth-child(2)
+{
+  background-color: #DEDEDE;
 }
 
 /**********/
@@ -303,7 +308,7 @@ nav li
 .menu nav
 {
   width: 33%;
-  padding: 0px 20px;
+  margin: 5px 20px;
   border: 1px solid;
 
   justify-content: space-between;
