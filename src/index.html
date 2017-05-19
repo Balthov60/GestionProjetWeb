@@ -91,35 +91,17 @@
       <div class="horizontal_separator"></div>
     
       <section class="contact horizontal_layout">
-        <div class="informations">
-          <div class="map">
-            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDB945z4jb3_k5cXhdz5DjUMehV1JM6rZk'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:450px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='http://maps-website.com/'>https://Maps-website.com</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=65d91282910d67a8862f954cf42ec42c484a3513'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(45.76255226366502,4.826491597627287),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.76255226366502,4.826491597627287)});infowindow = new google.maps.InfoWindow({content:'<strong>Les Adrets</strong><br>30 Rue du Boeuf<br>69005 Lyon<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-          </div>
-
-          <!-- <div class="info"> -->
-            <!-- <p>Adresse : 30, RUE DU BOEUF - 69005 LYON </p> -->
-            <!-- <p>Accès : </p> -->
-            <!-- <p>Horaire : Lundi - Vendredi  -->
-              <!-- <br> Midi : 12h00-13h30  -->
-              <!-- <br> Soir : 19h00-22h30 -->
-              <!-- <br> Fermeture en août et une semaine en hiver entre noel et jour de l'an  -->
-            <!-- </p> -->
-            <!-- <p>Téléphone : 04 78 38 24 30</p> -->
-          <!-- </div> -->
-        </div>
         
-        <div class="vertical_separator"></div>
-      
         <div class="booking">
           <form method="post" action="scriptPhpOuJavaACreer">
             <fieldset class="horizontal_layout espaced">
               <legend>Information de réservation</legend>
-              
-              <input name="date" id="date_input" type="date">
-              <br>
-              <label for="nbOfPeople">Nombre de personne(s) </label> 
-              <input id="number_input" name="nbOfPeople" max="5" min="0" value="0" type="number">
-              <br>
+              <label>Date :</label>
+              <input placeholder="dd/mm" type="date" id="date" name="date"/>
+              <label>Heure :</label>
+              <input placeholder="" type="time" id="time" name="time"/>
+              <label>Nombre de convives :</labe>
+              <input placeholder="1" type="number" id="number" name="number"/>
             </fieldset>
             <fieldset>
               <legend>Commentaires</legend>
@@ -147,8 +129,30 @@
             </div>
           </form>
         </div>
+        
+        <div class="informations">
+          <p>Adresse
+            <br>30, RUE DU BOEUF - 69005 LYON 
+          </p>
+          <p>Comment y aller ?
+            <br>Metro D arrêt Saint Jean
+            <br>Bus XX, XX et XX arrêt Saint Jean
+          </p>
+          <p>Ouvert du Lundi - Vendredi 
+            <br> Midi : 12h00-13h30 
+            <br> Soir : 19h00-22h30
+            <br> Fermeture en août et une semaine en hiver entre noel et jour de l'an 
+          </p>
+          <p>Téléphone
+            <br>- 04 78 38 24 30 -
+          </p>
+        </div>
+        
       </section>
       
+      <section>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5566.770698626524!2d4.8269833!3d45.763467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb87e5b44b9c7fbff!2sLes+Adrets!5e0!3m2!1sfr!2sfr!4v1495204259931" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>      
+      </section>
       
       <!-- <nav id="link_aside"> -->
         <!-- <ul> -->
