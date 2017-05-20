@@ -1,0 +1,346 @@
+/*************/
+/* Font Size */
+/*************/
+
+.main_navigation a
+{
+	font-size: 1.2em;
+}
+
+h1
+{
+  font-size: 2.4em;
+}
+
+h2
+{
+  font-size: 2em;
+  text-align: center;
+}
+
+.validation input 
+{
+  font-size: 1em;
+}
+
+/**************/
+/* Background */
+/**************/
+
+@media all and (min-width: 1475px) 
+{
+  body
+  {
+    background: url('images/background.png') no-repeat fixed center;
+    background-color: #333333;
+  }
+}
+
+.main_content
+{
+  width: 1080px;
+  margin: auto;
+}
+
+/**************/
+/* Main Items */
+/**************/
+
+section
+{
+  width: 90%;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+a
+{
+  text-align: center;
+  text-decoration: none;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**********/
+/* Header */
+/**********/
+
+header
+{
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+@media all and (max-width: 1150px) 
+{
+  header 
+  {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1
+  {
+    font-size: 2.3em;
+  }
+}
+
+.title
+{
+  width: 60%;
+  padding-left: 15px;
+  
+  display: flex;
+  align-items: center;
+}
+
+.title img
+{
+  width: 25%;
+}
+
+.title h1
+{
+	padding-left: 10px;
+}
+
+/* Nav Language */
+
+.language
+{
+  width: 10%;
+  margin-left: 5px;
+}
+
+nav ul
+{
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
+  padding-left: 5px;
+}
+
+nav li
+{
+  margin-right: 5px;
+}
+
+.language ul li img
+{
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+/* Main Navigation */
+
+.main_navigation
+{
+  width: 50%;
+}
+
+.main_navigation a
+{
+  flex-grow: 1;
+}
+
+/***********/
+/* history */ 
+/***********/
+
+.photos
+{
+  width: 80%;
+  height: auto;
+  margin: 25px 20px;
+}
+
+.history_text
+{
+  text-align: center;
+  padding: 0px 20px;
+  margin: auto;
+}
+
+.history_text h2
+{
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+.history_text p
+{
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+/********/
+/* menu */
+/********/
+
+.menu
+{
+  align-items: flex-end;
+  border: 1px solid;
+  
+  padding: 20px 20px 20px 0px;
+  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  background:url(images/menu.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.menu nav
+{
+  width: 33%;
+  margin: 5px 20px;
+  border: 1px solid;
+
+  justify-content: space-between;
+
+  background-color: #FFFFFF;
+}
+
+.menu nav a
+{
+  flex-grow: 1;
+  padding: 5px 0px;
+}
+
+.menu nav a:nth-child(1), .menu nav a:nth-child(2)
+{
+  border-right: 1px solid;
+}
+
+.menu_text
+{
+  width: 33%;
+  border: 1px solid;
+  padding: 10px 20px;
+  
+  text-align: center;
+}
+
+.menu_text ul
+{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.menu_text h2, menu_text ul
+{
+  margin: 5px 0px;
+}
+
+.menu_text ul li, p
+{
+  margin: 2px 0px;
+}
+
+/***********/
+/* contact */
+/***********/
+
+.contact
+{
+  padding: 20px 10px;
+}
+
+/* informations */
+
+.informations
+{
+  width: 40%;
+  
+  margin: auto 20px;
+  padding: 20px;
+  
+  text-align: center;
+}
+
+.informations p
+{
+  margin-top: 10px;
+}
+
+/* form */
+
+.booking 
+{
+  width: 55%;
+  margin: auto 20px;
+  margin-bottom: 10px;
+}
+
+fieldset
+{
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.validation
+{
+  height: 100%;
+  text-align: center;
+  margin: auto 20px;
+  margin-top: 30px;
+}
+
+.validation input
+{
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+
+#date
+{
+  width: 50px;
+  text-align: center;
+}
+
+#number
+{
+  width: 40px;
+}
+
+#commentary, .details input
+{
+  width: 100%;
+}
+
+/*******/
+/* map */
+/*******/
+
+.map
+{
+  width: 100%;
+  height: 250px;
+}
+
+/*********/
+/* aside */
+/*********/
+
+.link_aside
+{
+  position: fixed;
+  top: 50%;
+  left: 82%;
+}
+
+.link_aside img
+{
+  width: 15%;
+  height: auto;
+}
+
+.link_aside ul li
+{
+  margin-bottom: 10px;
+}

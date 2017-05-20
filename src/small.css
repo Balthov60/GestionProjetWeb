@@ -1,0 +1,347 @@
+/*************/
+/* Font Size */
+/*************/
+
+.main_navigation a
+{
+	font-size: 1em;
+}
+
+h1
+{
+  font-size: 2em;
+}
+
+h2
+{
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.validation input 
+{
+  font-size: 0.8em;
+}
+
+/***************/
+/* Basic Class */
+/***************/
+
+.small_vertical_reverse
+{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.small_vertical
+{
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (max-width:400px) 
+{
+  .very_small_vertical
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/**************/
+/* Background */
+/**************/
+
+.main_content
+{
+  width: 95%;
+  margin: auto;
+}
+
+/**************/
+/* Main Items */
+/**************/
+
+section
+{
+  width: 95%;
+  margin: 15px auto;
+  padding: 10px;  
+}
+
+a
+{
+  text-align: center;
+  text-decoration: none;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**********/
+/* Header */
+/**********/
+
+header
+{
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.title
+{
+  margin: auto;
+  align-items: center;
+}
+
+.title img
+{
+  height: 4em;
+}
+
+@media all and (max-width:500px) 
+{
+  .title img
+  {
+    display: none;
+  }  
+}
+
+.title h1
+{
+	padding-left: 10px;
+}
+
+/* Nav Language */
+
+.language
+{
+  width: 10%;
+  margin-left: 5px;
+}
+
+nav ul
+{
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
+  padding-left: 5px;
+}
+
+nav li
+{
+  margin-right: 5px;
+}
+
+.language ul li img
+{
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+/* Main Navigation */
+
+.main_navigation
+{
+  width: 50%;
+}
+
+.main_navigation a
+{
+  flex-grow: 1;
+}
+
+/***********/
+/* history */ 
+/***********/
+
+.photos
+{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.history_text
+{
+  text-align: center;
+  padding: 0px 20px;
+  margin: auto;
+}
+
+.history_text h2
+{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.history_text p
+{
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+/********/
+/* menu */
+/********/
+
+.menu
+{
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.menu nav
+{
+  width: 60%;
+  margin: 5px 20px;
+  border: 1px solid;
+
+  justify-content: space-between;
+
+  background-color: #FFFFFF;
+}
+
+.menu nav a
+{
+  flex-grow: 1;
+  padding: 5px 0px;
+}
+
+.menu nav a:nth-child(1), .menu nav a:nth-child(2)
+{
+  border-right: 1px solid;
+}
+
+.menu_text
+{
+  width: auto;
+  border: 1px solid;
+  border-radius: 10px;
+  
+  padding: 10px 20px;
+  
+  text-align: center;
+}
+
+.menu_text ul
+{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.menu_text h2, menu_text ul
+{
+  margin: 5px 0px;
+}
+
+.menu_text ul li, p
+{
+  margin: 2px 0px;
+}
+
+/***********/
+/* contact */
+/***********/
+
+.contact
+{
+  padding: 20px 10px;
+}
+
+/* informations */
+
+.informations
+{ 
+  margin: auto 20px;
+  padding: 20px;
+  
+  text-align: center;
+}
+
+.informations p
+{
+  margin-top: 10px;
+}
+
+/* form */
+
+.booking 
+{
+  width: 90%;
+  margin: auto 20px;
+  margin-bottom: 10px;
+}
+
+fieldset
+{
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.validation
+{
+  height: 100%;
+  text-align: center;
+  margin: auto 20px;
+  margin-top: 30px;
+}
+
+.validation input
+{
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+
+#date
+{
+  text-align: center;
+}
+
+#commentary, .reservation input, .reservation select, .details input
+{
+  width: 100%;
+}
+
+.reservation
+{
+  flex-direction: column;
+}
+
+.reservation label
+{
+  margin: auto;
+}
+
+/*******/
+/* map */
+/*******/
+
+.map
+{
+  width: 100%;
+  height: 250px;
+}
+
+/*********/
+/* aside */
+/*********/
+
+.link_aside
+{
+  position: fixed;
+  top: 50%;
+  left: 82%;
+}
+
+.link_aside img
+{
+  width: 15%;
+  height: auto;
+}
+
+.link_aside ul li
+{
+  margin-bottom: 10px;
+}
