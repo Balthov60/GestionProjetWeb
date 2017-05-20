@@ -66,16 +66,15 @@ section, header, footer, .menu_text
 	background-color: #EFEFEF;
 }
 
-main_navigation 
+.informations
 {
-	background-color: #000000;
+	background-color: #FFFFFF;
 }
 
 a 
 {
 	color: #000000;
 }
-
 
 h1, h2 
 {
@@ -102,7 +101,7 @@ section
   border-radius: 5px;
 }
 
-section img
+section img, .informations
 {
 	border: 1px solid;
 	border-color: #C59D5F;
@@ -197,7 +196,7 @@ a
 header
 {
   border-radius: 15px;
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 
 .title
@@ -264,6 +263,7 @@ nav li
 .photos
 {
   width: 80%;
+  height: auto;
   margin: 25px 20px;
 }
 
@@ -346,28 +346,20 @@ nav li
   margin: 5px 0px;
 }
 
-.menu_text ul li
+.menu_text ul li, p
 {
   margin: 2px 0px;
 }
 
-/* access */
+/***********/
+/* contact */
+/***********/
 
 .contact
 {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.informations
-{
-  width: 50%;
-}
-
-.booking 
-{
-  width: 55%;
-  margin: auto;
+  padding: 20px 10px;
 }
 
 /* informations */
@@ -375,15 +367,24 @@ nav li
 .informations
 {
   width: 40%;
+  
   margin: auto 20px;
-  padding: 0px 10px;
+  padding: 20px;
+  
   text-align: center;
+}
+
+.informations p
+{
+  margin-top: 10px;
 }
 
 /* form */
 
-.booking
+.booking 
 {
+  width: 55%;
+  margin: auto 20px;
 }
 
 .informations_form
