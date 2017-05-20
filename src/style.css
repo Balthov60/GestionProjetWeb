@@ -86,7 +86,7 @@ h1, h2
 	color: #BE1E30;
 }
 
-a:hover,
+a:hover
 {
   color: #C59D5F;
   text-decoration: underline;
@@ -136,6 +136,8 @@ body
 {
   width: 1080px;
   margin: auto;
+  
+  position: relative;
 }
 
 /***************/
@@ -252,6 +254,8 @@ nav li
 .language ul li img
 {
   border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 /* Main Navigation */
@@ -367,8 +371,6 @@ nav li
 
 .contact
 {
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 20px 10px;
 }
 
@@ -429,7 +431,9 @@ fieldset
   width: 40px;
 }
 
+/*******/
 /* map */
+/*******/
 
 .map
 {
@@ -437,25 +441,24 @@ fieldset
   height: 250px;
 }
 
-/* footer */
-
-footer
-{
-  padding: 15px;
-  border-radius: 0px 0px 10px 10px;
-  text-align: center;
-}
-
+/*********/
 /* aside */
+/*********/
 
-#link_aside
+.link_aside
 {
   position: fixed;
   top: 50%;
-  right: 0px;
+  left: 82%;
 }
 
-#link_aside ul li
+.link_aside img
+{
+  width: 15%;
+  height: auto;
+}
+
+.link_aside ul li
 {
   margin-bottom: 10px;
 }
