@@ -94,38 +94,54 @@
       <section class="contact horizontal_layout">
         
         <div class="booking">
-          <form method="post" action="scriptPhpOuJavaACreer">
+          <form method="post" action="scriptPhpOuJavaACreer">       
             <fieldset class="horizontal_layout espaced">
-              <legend>Information de réservation</legend>
-              <label>Date :</label>
-              <input placeholder="dd/mm" type="date" id="date" name="date"/>
-              <label>Heure :</label>
-              <input placeholder="" type="time" id="time" name="time"/>
-              <label>Nombre de convives :</labe>
-              <input placeholder="1" type="number" id="number" name="number"/>
+              <legend>Réservation</legend>
+              
+              <label>Date & Heure</label> : <input placeholder="dd/mm" type="date" id="date" name="date"/>
+              <select name="pays" id="pays">
+                <optgroup label="Déjeuner :">
+                  <option>12h00</option>
+                  <option>12h30</option>
+                  <option>13h00</option>
+                  <option>13h30</option>
+                </optgroup>
+                <optgroup label="Diner :">
+                  <option>19h00</option>
+                  <option>19h30</option>
+                  <option>20h00</option>
+                  <option>20h30</option>
+                  <option>21h00</option>
+                  <option>21h30</option>
+                  <option>22h00</option>
+                  <option>22h30</option>
+                 </optgroup>
+              </select>
+              
+              <label>Nombre de convives</label> : <input placeholder="1" type="number" id="number" name="number"/>
             </fieldset>
+            
             <fieldset>
               <legend>Commentaires</legend>
-              <textarea name="commentairy_input" id="commentairy_input" rows="5" cols="40" placeholder="Vos commentaires..."></textarea>       
+              <textarea name="commentairy_input" id="commentairy_input" rows="5" cols="57" placeholder="Des spécifications lié à la réservations ?"></textarea>       
             </fieldset>
+            
             <div class="horizontal_layout">
-              <fieldset class="informations_form">
+              <fieldset>
                 <legend>Coordonnées</legend>
                 <input name="Lastname" id="lastname_input" placeholder="Nom" type="text">
                 <br>
-
                 <input name="firstname" id="firstname_input" placeholder="Prénom" type="text">
                 <br>
-
                 <input name="email" id="email_input" placeholder="Mail" type="email">
                 <br>
-
                 <input name="tel" id="tel_input" placeholder="Téléphone" type="tel">
                 <br>
               </fieldset>
-              <div class="infos_form">
-                <p>Pour les réservations de plus de 5 personnes, veuillez nous contacter par telephone.</p>
-                <input type="submit" value="Envoyer" />
+              
+              <div class="validation vertical_layout">
+                <p>Pour les réservations de plus de cinq personnes, contacter nous par telephone.</p>
+                <input type="submit" value="Envoyer la Réservation" />
               </div>
             </div>
           </form>
