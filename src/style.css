@@ -84,6 +84,8 @@ section img, .informations
 fieldset
 {
   border-color: #000000;
+  margin-bottom: 10px;
+  padding-right: 15px;
 }
 
 /*********/
@@ -371,13 +373,6 @@ fieldset
 /*********/
 /* aside */
 /*********/
-
-.link_aside
-{
-  position: fixed;
-  top: 50%;
-  left: 82%;
-}
 
 .link_aside img
 {
