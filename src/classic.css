@@ -90,7 +90,8 @@ header
 
 .title
 {
-  width: 60%;
+  width: 100%;
+  flex-grow: 1;
   padding-left: 15px;
   
   display: flex;
@@ -111,7 +112,7 @@ header
 
 .language
 {
-  width: 10%;
+  width: 20%;
   margin-left: 5px;
 }
 
@@ -139,7 +140,7 @@ nav li
 
 .main_navigation
 {
-  width: 50%;
+  width: 100%;
 }
 
 .main_navigation a

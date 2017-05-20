@@ -2,7 +2,7 @@
 /* Font Size */
 /*************/
 
-.main_navigation a
+a
 {
 	font-size: 1em;
 }
@@ -21,6 +21,42 @@ h2
 .validation input 
 {
   font-size: 0.8em;
+}
+
+@media all and (max-width:390px) 
+{
+  h1
+  {
+    font-size: 1.5em;
+  }
+  
+  h2
+  {
+    font-size: 1.25em;
+  }
+  
+  a
+  {
+    font-size: 0.8em;
+  }
+  
+  p, input, li, legend, label
+  {
+    font-size: 0.8em;
+  }
+}
+
+@media all and (max-width:320px) 
+{
+  h1
+  {
+    font-size: 1.25em;
+  }
+  
+  h2
+  {
+    font-size: 1.20em;
+  }
 }
 
 /***************/
@@ -117,7 +153,10 @@ header
 
 .language
 {
-  width: 10%;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  width: 60px;
   margin-left: 5px;
 }
 
@@ -145,7 +184,7 @@ nav li
 
 .main_navigation
 {
-  width: 50%;
+  width: 100%;
 }
 
 .main_navigation a
