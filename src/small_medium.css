@@ -1,0 +1,277 @@
+/*************/
+/* Font Size */
+/*************/
+
+/* Default Size */
+@media all 
+{
+  a
+  {
+    font-size: 1em;
+  }
+
+  h1
+  {
+    font-size: 2em;
+  }
+
+  h2
+  {
+    font-size: 1.75em;
+    text-align: center;
+  }
+
+  .validation input 
+  {
+    font-size: 0.8em;
+  }
+}
+
+/* Medium Size */
+@media all and (min-width:700px) and (max-width:800px) 
+{
+  h1
+  {
+    font-size: 1.5em;
+  }
+  
+  h2
+  {
+    font-size: 1.4em;
+  }
+  
+  a
+  {
+	font-size: 0.9em;
+  }
+}
+
+@media all and (min-width:675px) and (max-width:700px) 
+{
+  h1, h2
+  {
+    font-size: 1.3em;
+  }
+  
+  a
+  {
+	font-size: 0.9em;
+  }
+}
+
+/* Small Size */
+@media all and (max-width:390px) 
+{
+  h1
+  {
+    font-size: 1.5em;
+  }
+  
+  h2
+  {
+    font-size: 1.25em;
+  }
+  
+  p, input, li, legend, label, a
+  {
+    font-size: 0.8em;
+  }
+}
+
+@media all and (max-width:320px) 
+{
+  h1
+  {
+    font-size: 1.25em;
+  }
+  
+  h2
+  {
+    font-size: 1.20em;
+  }
+}
+
+/***************/
+/* Basic Class */
+/***************/ 
+
+.medium_vertical
+{
+    display: flex;
+  flex-direction: column;
+}
+
+.medium_vertical_reverse
+{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media all and (max-width:675px) 
+{
+  .small_vertical
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width:400px) 
+{
+  .very_small_vertical
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/**************/
+/* Main Items */
+/**************/
+
+.main_content
+{
+  width: 95%;
+}
+
+section
+{
+  width: 95%;
+}
+
+/**********/
+/* Header */
+/**********/
+
+.title
+{
+  margin-right: 20px;
+}
+
+
+@media all and (max-width:675px) 
+{
+  .title
+  {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.title img
+{
+  height: 4em;
+}
+
+@media all and (max-width:500px) 
+{
+  .title img
+  {
+    display: none;
+  }  
+}
+
+
+.navigation
+{
+  flex: 2;
+}
+
+/* Nav Language */
+
+@media all and (max-width:875px) 
+{
+  .language
+  {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    width: 60px;
+    margin-left: 5px;
+  }
+}
+
+/***********/
+/* history */ 
+/***********/
+
+.photos
+{
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+}
+
+/********/
+/* menu */
+/********/
+
+.menu
+{
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.menu nav
+{
+  width: 60%;
+}
+
+.menu_text
+{
+  width: auto;
+  border-radius: 10px;
+}
+
+/***********/
+/* contact */
+/***********/
+
+/* form */
+
+.booking 
+{
+  width: 90%;
+}
+
+.reservation input, .reservation select, .details input
+{
+  width: 100%;
+}
+
+.reservation label
+{
+  margin: auto;
+}
+
+/*******/
+/* map */
+/*******/
+
+.map
+{
+  width: 100%;
+  height: 250px;
+}
+
+/*********/
+/* aside */
+/*********/
+
+.link_aside
+{
+  position: fixed;
+  top: 50%;
+  left: 82%;
+}
+
+.link_aside img
+{
+  width: 15%;
+  height: auto;
+}
+
+.link_aside ul li
+{
+  margin-bottom: 10px;
+}
