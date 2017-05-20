@@ -23,6 +23,14 @@ h2
   font-size: 0.8em;
 }
 
+@media all and (min-width:720px) and (max-width:800px) 
+{
+  h1
+  {
+    font-size: 1.5em;
+  }
+}
+
 @media all and (max-width:390px) 
 {
   h1
@@ -61,18 +69,21 @@ h2
 
 /***************/
 /* Basic Class */
-/***************/
+/***************/ 
 
-.small_vertical_reverse
+.medium_vertical_reverse
 {
   display: flex;
   flex-direction: column-reverse;
 }
 
-.small_vertical
+@media all and (max-width:720px) 
 {
-  display: flex;
-  flex-direction: column;
+  .small_vertical
+  {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width:400px) 
@@ -127,8 +138,18 @@ header
 
 .title
 {
-  margin: auto;
   align-items: center;
+  margin-right: 20px;
+}
+
+
+@media all and (max-width:720px) 
+{
+  .title
+  {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .title img
@@ -149,13 +170,18 @@ header
 	padding-left: 10px;
 }
 
+.navigation
+{
+  flex: 2;
+}
+
 /* Nav Language */
 
 .language
 {
   position: absolute;
   top: 0px;
-  right: 25px;
+  right: 5%;
   width: 60px;
   margin-left: 5px;
 }
@@ -189,6 +215,7 @@ nav li
 
 .main_navigation a
 {
+  text-align: center;
   flex-grow: 1;
 }
 
