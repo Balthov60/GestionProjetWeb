@@ -61,7 +61,7 @@ h2
 /* Color */
 /*********/
 
-.horizontal_separator, .vertical_separator 
+.horizontal_separator
 {
 	background-color: #C59D5F;
 }
@@ -126,11 +126,19 @@ fieldset
 /* Background */
 /**************/
 
-body
+@media all and (min-width: 1475px) 
 {
-	background: url('images/background.png') no-repeat fixed center;
-  background-color: #333333;
+  body
+  {
+    background: url('images/background.png') no-repeat fixed center;
+    background-color: #333333;
+  }
 }
+
+body
+  {
+    background-color: #333333;
+  }
 
 .main_content
 {
@@ -172,12 +180,6 @@ body
   width: 92%; 
   height: 3px;
   margin: auto;
-}
-
-.vertical_separator
-{
-  width: 3px; 
-  height: 93%;
 }
 
 /**************/
