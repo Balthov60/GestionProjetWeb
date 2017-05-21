@@ -66,11 +66,6 @@ h1, h2
   margin: auto;
 }
 
-/*************/
-/* JS Linked */
-/*************/
-
-
 /**********/
 /* Border */
 /**********/
@@ -80,7 +75,7 @@ section
   border-radius: 5px;
 }
 
-section img, .informations
+.slideshow, .informations
 {
 	border: 1px solid;
 	border-color: #C59D5F;
@@ -91,6 +86,15 @@ fieldset
   border-color: #000000;
   margin-bottom: 10px;
   padding-right: 15px;
+}
+
+/*************/
+/* JS Linked */
+/*************/
+
+.photos
+{
+  visibility: hidden;
 }
 
 /*********/
@@ -235,6 +239,19 @@ nav li
 /***********/
 /* history */ 
 /***********/
+
+.photos
+{
+  width: 100%;
+  height: auto;
+}
+
+.slideshow
+{
+  background: url('images/historic_restaurant_1.jpg') no-repeat center;
+  background-size: auto 100%;
+  margin: 20px 10px;
+}
 
 .history_text
 {
