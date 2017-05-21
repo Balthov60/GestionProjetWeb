@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
     <title>Les Adrets</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
@@ -37,9 +38,8 @@
       </header>
       
       <section id="restaurant_history" class="history horizontal_layout medium_vertical_reverse">
-        
-        <img src="images/historic_restaurant.jpg" class="photos" />
-        
+    		
+        <img src="images/historic_restaurant_1.jpg" alt="image Plat 1" class="photos" id="restaurant_history_img"/>        
         <div class="history_text">
           <h2>Le Restaurant</h2>
           <p>
@@ -52,7 +52,8 @@
       <div class="horizontal_separator"></div>
 
       <section id="chief_history" class="history honrizontal_reverse_layout medium_vertical_reverse">
-        <img class="photos" src="images/historic_chef.jpg" />
+
+    		<img src="images/historic_chef.jpg" alt="image Plat 1" class="photos slideshow_image" />
 
         <div class="history_text">
           <h2>Le Chef</h2>
@@ -194,6 +195,9 @@
         <li><a href="#booking_section"><img src="images/side_button.png" alt="button"/></a></li>
       </ul>
     </nav> 
-      
+    
+    <!-- Java Script -->
+    <script src="js/slideshow.js"></script>
+
   </body>
 </html>
