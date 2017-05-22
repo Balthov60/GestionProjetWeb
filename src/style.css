@@ -94,7 +94,7 @@ fieldset
 
 .photos
 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 /*********/
@@ -243,7 +243,7 @@ nav li
 .photos
 {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .slideshow
