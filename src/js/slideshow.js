@@ -1,9 +1,12 @@
 // Image Status
 var index = 1;
 var opacity = 0;
+var pictureQty = 2;
 
 // Images
-var images = document.getElementsByClassName('fade');
+var images = document.getElementsByClassName("fade");
+var background = document.getElementsByClassName("slideshow");
+var path = ["images/historic_chief_", "images/historic_restaurant_"];
 var i;
 
 // Smooth Param
@@ -41,16 +44,10 @@ function invertSmooth() {
 }
 
 function changePicture() {
-	if (index == 1) {
-	  document.getElementById('restaurant_history_img').style.backgroundImage = 'url(images/historic_restaurant_1.jpg)';
-	  document.getElementById('chief_history_img').style.backgroundImage = 'url(images/historic_chief_1.jpg)';
-	  index = 2;
-	}
-	else {
-	  document.getElementById('restaurant_history_img').style.backgroundImage = 'url(images/historic_restaurant_2.jpg)';
-	  document.getElementById('chief_history_img').style.backgroundImage = 'url(images/historic_chief_2.jpg)';
-	  index = 1;
-	}
+	if (i >= pictureQty)
+		i = 0;
+	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
+	i++;
 	setTimeout(invertSmooth, smoothDelay);
 }
 
