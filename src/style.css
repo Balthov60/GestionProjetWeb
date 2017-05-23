@@ -168,7 +168,7 @@ body
 /* Main Items */
 /**************/
 
-.main_content
+#main_content
 {
   margin: auto;
 }
@@ -179,7 +179,7 @@ section
   padding: 10px;  
 }
 
-a
+.text_navigation a
 {
   text-align: center;
   text-decoration: none;
@@ -238,7 +238,7 @@ nav li
 
 /* Main Navigation */
 
-.main_navigation
+header .main_navigation
 {
   width: 100%;
 }
@@ -408,13 +408,18 @@ fieldset
 /* aside */
 /*********/
 
-.link_aside img
+#link_aside
 {
-  width: 15%;
+  position: fixed;
+}
+
+#link_aside img
+{
+  width: 15px;
   height: auto;
 }
 
-.link_aside ul li
+#link_aside ul li
 {
   margin-bottom: 10px;
 }

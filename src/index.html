@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div class="main_content">
+    <div id="main_content">
       <header class="horizontal_layout small_vertical">
 
         <div class="title horizontal_layout">
@@ -28,11 +28,11 @@
             </ul>
           </nav>
           
-          <nav class="main_navigation horizontal_layout">
-            <a href="#scrollHistory" class="middleScroll"       >ACCEUIL</a>
+          <nav class="main_navigation text_navigation horizontal_layout">
+            <a href="#scrollHistory"      class="middleScroll"  >ACCEUIL</a>
             <a href="#scrollMenu"         class="middleScroll"  >MENUS</a>
             <a href="#scrollContact"      class="middleScroll"  >RESERVATIONS</a>
-            <a href="#scrollMap"        class="scroll"          >CARTE</a>
+            <a href="#scrollMap"          class="scroll"        >CARTE</a>
           </nav>
         </div>
         
@@ -74,7 +74,7 @@
       <section id="menu" class="menu waypoint_container vertical_layout">
         <div id="scrollMenu" class="waypoint"></div>
 
-        <nav class="horizontal_layout">
+        <nav class="text_navigation horizontal_layout">
           <a href="#">MENU</a>
           <a href="#">AUJOURD'HUI</a>
           <a href="#">CARTE</a>
@@ -195,12 +195,20 @@
       </section>   
     
     <!-- NEED JS -->
-    <nav class="link_aside">
+    <nav id="link_aside" class="main_navigation">
       <ul>
-        <li><a href="#restaurant_history"><img src="images/side_button_full.png" alt="button"/></a></li>
-        <li><a href="#chief_history"><img src="images/side_button.png" alt="button"/></a></li>
-        <li><a href="#menu_container"><img src="images/side_button.png" alt="button"/></a></li>
-        <li><a href="#booking_section"><img src="images/side_button.png" alt="button"/></a></li>
+        <li>
+          <img src="images/side_button_full.png" href="#scrollHistory" class="asideButton middleScroll" alt="button"/>
+        </li>
+        <li>
+          <img src="images/side_button.png" href="#scrollMenu" class="asideButton middleScroll" alt="button"/>
+        </li>
+        <li>
+          <img src="images/side_button.png" href="#scrollContact" class="asideButton middleScroll" alt="button"/>
+        </li>
+        <li>
+        <img src="images/side_button.png" href="#scrollMap" class="asideButton scroll" alt="button"/>
+        </li>
       </ul>
     </nav> 
     
@@ -211,6 +219,7 @@
     
     <script src="js/smoothScrolling.js"></script>
     <script src="js/slideshow.js"></script>
+    <script src="js/asideNavigation.js"></script>
 
   </body>
 </html>

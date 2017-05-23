@@ -129,7 +129,7 @@
 /* Main Items */
 /**************/
 
-.main_content
+#main_content
 {
   width: 95%;
 }
@@ -258,7 +258,7 @@ section
 /* aside */
 /*********/
 
-.link_aside
+#link_aside
 {
   display: none;
 }

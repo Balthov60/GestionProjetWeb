@@ -52,7 +52,7 @@
 /* Main Items */
 /**************/
 
-.main_content
+#main_content
 {
   width: 1080px;
 }
@@ -140,13 +140,4 @@ section
 #number
 {
   width: 40px;
-}
-
-/*********/
-/* aside */
-/*********/
-
-.link_aside
-{
-  display: none;
 }
