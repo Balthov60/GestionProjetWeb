@@ -1,12 +1,12 @@
 // Image Status
 var index = 1;
 var opacity = 0;
-var pictureQty = 2;
+var pictureQty = 3;	
 
 // Images
 var images = document.getElementsByClassName("fade");
 var background = document.getElementsByClassName("slideshow");
-var path = ["images/historic_chief_", "images/historic_restaurant_"];
+var path = ["images/historic/chief_", "images/historic/restaurant_"];
 var i;
 
 // Smooth Param
@@ -44,11 +44,20 @@ function invertSmooth() {
 }
 
 function changePicture() {
-	if (i >= pictureQty)
-		i = 0;
-	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
-	i++;
+	if (index > pictureQty)
+		index = 0;
+
+	index++;
+	for (i = 0; i < background.length; i++) {
+		background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
+	}
+
+	index++;
 	setTimeout(invertSmooth, smoothDelay);
 }
 
-run();
+index++
+for (i = 0; i < background.length; i++) {
+	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
+}
+setTimeout(run, 5000);
