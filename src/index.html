@@ -29,10 +29,10 @@
           </nav>
           
           <nav class="main_navigation horizontal_layout">
-            <a href="#restaurant_history" class="topScroll"     >ACCEUIL</a>
-            <a href="#scrollChief"        class="middleScroll"  >LE CHEF</a>
+            <a href="#scrollHistory" class="middleScroll"       >ACCEUIL</a>
             <a href="#scrollMenu"         class="middleScroll"  >MENUS</a>
-            <a href="#contact"            class="scroll"        >RESERVATIONS</a>
+            <a href="#scrollContact"      class="middleScroll"  >RESERVATIONS</a>
+            <a href="#scrollMap"        class="scroll"          >CARTE</a>
           </nav>
         </div>
         
@@ -52,7 +52,7 @@
         </div>  
       </section>
 
-      <div class="horizontal_separator"></div>
+      <div id="scrollHistory" class="horizontal_separator"></div>
 
       <section id="chief_history" class="history waypoint_container honrizontal_reverse_layout medium_vertical_reverse">
         <div id="scrollChief" class="waypoint"></div>
@@ -104,8 +104,9 @@
 
       <div class="horizontal_separator"></div>
     
-      <section id="contact" class="contact horizontal_layout medium_vertical_reverse">
-        
+      <section id="contact" class="contact waypoint_container horizontal_layout medium_vertical_reverse">
+        <div id="scrollContact" class="waypoint"></div>
+
         <div class="booking">
           <form method="post" action="scriptPhpOuJavaACreer">       
             <fieldset class="horizontal_layout medium_vertical espaced reservation">
@@ -188,7 +189,7 @@
       
       <div class="horizontal_separator"></div>
       
-      <section>
+      <section id = "scrollMap">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5566.770698626524!2d4.8269833!3d45.763467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb87e5b44b9c7fbff!2sLes+Adrets!5e0!3m2!1sfr!2sfr!4v1495204259931" 
         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>      
       </section>   

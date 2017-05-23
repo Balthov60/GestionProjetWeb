@@ -19,14 +19,6 @@ $(document).ready(function() {
 		$('html, body').animate( {
 			scrollTop: $(linkHref).offset().top
 		});
-		
-		e.preventDefault();
-	});
-
-	$('.topScroll').click(function() {
-		$('html, body').animate( {
-			scrollTop: 1
-		});
 
 		e.preventDefault();
 	});
