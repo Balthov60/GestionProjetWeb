@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
     <title>Les Adrets</title>
-    
+
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css" />
@@ -29,10 +29,10 @@
           </nav>
           
           <nav class="main_navigation horizontal_layout">
-            <a href="#">ACCEUIL</a>
-            <a href="#">LE CHEF</a>
-            <a href="#">MENUS</a>
-            <a href="#">RESERVATIONS</a>
+            <a href="#restaurant_history" class="topScroll"     >ACCEUIL</a>
+            <a href="#scrollChief"        class="middleScroll"  >LE CHEF</a>
+            <a href="#scrollMenu"         class="middleScroll"  >MENUS</a>
+            <a href="#contact"            class="scroll"        >RESERVATIONS</a>
           </nav>
         </div>
         
@@ -54,7 +54,8 @@
 
       <div class="horizontal_separator"></div>
 
-      <section id="chief_history" class="history honrizontal_reverse_layout medium_vertical_reverse">
+      <section id="chief_history" class="history waypoint_container honrizontal_reverse_layout medium_vertical_reverse">
+        <div id="scrollChief" class="waypoint"></div>
 
         <div class="slideshow">
           <img src="images/white.jpg" alt="photo plat" class="photos fade"/>
@@ -70,7 +71,9 @@
 
       <div class="horizontal_separator"></div>
       
-      <section class="menu vertical_layout">
+      <section id="menu" class="menu waypoint_container vertical_layout">
+        <div id="scrollMenu" class="waypoint"></div>
+
         <nav class="horizontal_layout">
           <a href="#">MENU</a>
           <a href="#">AUJOURD'HUI</a>
@@ -101,7 +104,7 @@
 
       <div class="horizontal_separator"></div>
     
-      <section class="contact horizontal_layout medium_vertical_reverse">
+      <section id="contact" class="contact horizontal_layout medium_vertical_reverse">
         
         <div class="booking">
           <form method="post" action="scriptPhpOuJavaACreer">       
@@ -201,6 +204,11 @@
     </nav> 
     
     <!-- Java Script -->
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+    
+    <script src="js/smoothScrolling.js"></script>
     <script src="js/slideshow.js"></script>
 
   </body>

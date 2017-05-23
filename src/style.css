@@ -66,6 +66,18 @@ h1, h2
   margin: auto;
 }
 
+.waypoint_container
+{
+  position: relative;
+}
+
+.waypoint
+{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+
 /**********/
 /* Border */
 /**********/
