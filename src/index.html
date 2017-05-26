@@ -32,7 +32,6 @@
             <a href="#scrollHistory"      class="middleScroll"  >ACCEUIL</a>
             <a href="#scrollMenu"         class="middleScroll"  >MENUS</a>
             <a href="#scrollContact"      class="middleScroll"  >RESERVATIONS</a>
-            <a href="#scrollMap"          class="scroll"        >CARTE</a>
           </nav>
         </div>
         
@@ -55,7 +54,7 @@
       <div id="scrollHistory" class="horizontal_separator"></div>
 
       <section id="chief_history" class="history waypoint_container honrizontal_reverse_layout medium_vertical_reverse">
-        <div id="scrollChief" class="waypoint"></div>
+        <div id="scrollChief" class="_waypoint"></div>
 
         <div class="slideshow">
           <img src="images/white.jpg" alt="photo plat" class="photos fade"/>
@@ -69,10 +68,10 @@
         </div>
       </section>
 
-      <div class="horizontal_separator"></div>
+      <div id="menuScrollPoint" class="horizontal_separator scrollPoint"></div>
       
       <section id="menu" class="menu waypoint_container vertical_layout">
-        <div id="scrollMenu" class="waypoint"></div>
+        <div id="scrollMenu" class="_waypoint"></div>
 
         <nav class="text_navigation horizontal_layout">
           <a href="#">MENU</a>
@@ -102,10 +101,10 @@
         </div>
       </section>
 
-      <div class="horizontal_separator"></div>
+      <div id="contactScrollPoint" class="horizontal_separator"></div>
     
       <section id="contact" class="contact waypoint_container horizontal_layout medium_vertical_reverse">
-        <div id="scrollContact" class="waypoint"></div>
+        <div id="scrollContact" class="_waypoint"></div>
 
         <div class="booking">
           <form method="post" action="scriptPhpOuJavaACreer">       
@@ -187,7 +186,7 @@
         </div>     
       </section>
       
-      <div class="horizontal_separator"></div>
+      <div id="mapScrollPoint" class="horizontal_separator"></div>
       
       <section id = "scrollMap">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5566.770698626524!2d4.8269833!3d45.763467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb87e5b44b9c7fbff!2sLes+Adrets!5e0!3m2!1sfr!2sfr!4v1495204259931" 
@@ -206,9 +205,6 @@
         <li>
           <img src="images/side_button.png" href="#scrollContact" class="asideButton middleScroll" alt="button"/>
         </li>
-        <li>
-        <img src="images/side_button.png" href="#scrollMap" class="asideButton scroll" alt="button"/>
-        </li>
       </ul>
     </nav> 
     
@@ -216,7 +212,8 @@
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
     <script src="js/smoothScrolling.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>

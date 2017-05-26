@@ -20,5 +20,35 @@ for (var i = 0; i < asideNavigationItems.length; i++) {
 	asideNavigationItems[i].onclick = function() { changeColor(this) };
 }
 
+var waypointHistory = new Waypoint({
+	element: document.getElementById('scrollHistory'),
+	handler: function(direction) {
+		if (direction == 'down')
+			changeColor(asideNavigationItems[0]);
+	},
+	offset: '50%'
+});
+var waypointMenu = new Waypoint({
+	element: document.getElementById('menuScrollPoint'),
+	handler: function(direction) {
+		if (direction == 'down')
+			changeColor(asideNavigationItems[1]);
+		else
+			changeColor(asideNavigationItems[0]);
+	},
+	offset: '50%'
+});
+var waypointContact = new Waypoint({
+	element: document.getElementById('contactScrollPoint'),
+	handler: function(direction) {
+		if (direction == 'down')
+			changeColor(asideNavigationItems[2]);
+		else
+			changeColor(asideNavigationItems[1]);
+	},
+	offset: '50%'
+});
+
+
 document.getElementsByTagName("BODY")[0].onresize = function() { placeAside() };
 placeAside();

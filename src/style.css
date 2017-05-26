@@ -71,7 +71,7 @@ h1, h2
   position: relative;
 }
 
-.waypoint
+._waypoint
 {
   position: absolute;
   top: 50%;
