@@ -27,6 +27,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
+  <script charset="UTF-8" src="http://lesadrets.esy.es/js/onloadMenuDisplay.js" type="text/javascript"></script>  
+
   <body>
     <div id="main_content">
       <header class="horizontal_layout small_vertical">
@@ -96,21 +98,15 @@
         <div class="menu_text vertical_layout">
           <h2 class="start_course"><?php echo ENTREE ?></h2>
           <ul class="vertical_layout menuDisplayer">
-            <li>Salade lyonnaise</li>
-            <li>Saumon tiède, salade de Roquette au Wasabi</li>
-            <li>Foie gras, mélange du jardin</li>
+            <li>Erreur de Lecture du fichier</li>
           </ul>
           <h2 class="main_course"><?php echo PLAT ?></h2>
           <ul class="vertical_layout menuDisplayer">
-            <li>Soufflé de brochet, crème d'écrevisse</li>
-            <li>Andouillette de Bobosse à la ficelle</li>
-            <li>Magret de canard "France" poelé</li>
+            
           </ul>
           <h2 class="dessert"><?php echo DESSERT ?></h2>
           <ul class="vertical_layout menuDisplayer">
-            <li>Cervelle de canut ou fromage blanc</li>
-            <li>Plateau de fromage</li>
-            <li>Carte des desserts</li>
+            
           </ul>
           <p class="price">(<?php echo PRIX ?> : 35€)</P>
         </div>
@@ -121,9 +117,8 @@
           var plat = '<?php echo PLAT ?>';
           var dessert = '<?php echo DESSERT ?>';
         </script>
-        <script charset="UTF-8" src="http://lesadrets.esy.es/js/carte_Html_Modif.js" type="text/javascript"></script>
 
-        
+        <script charset="UTF-8" src="http://lesadrets.esy.es/js/carte_Html_Modif.js" type="text/javascript"></script>      
         <script charset="UTF-8" src="http://lesadrets.esy.es/js/menuR.js" type="text/javascript"></script>
 
       </section>
