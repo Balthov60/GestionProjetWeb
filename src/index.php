@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <?php
       if(isset($_GET['lang']))
         $lang = $_GET['lang'];
       else 
-        $lang = '';
+        $lang = 'fr';
 
       if($lang == 'en')
         include('lang/en_lang.php');
       else
         include('lang/fr_lang.php');
-
     ?>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
     <title>Les Adrets</title>
@@ -22,6 +23,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -42,7 +45,7 @@
           
           <nav class="main_navigation text_navigation horizontal_layout">
             <a href="#scrollHistory"      class="middleScroll"  ><?php echo ACCUEIL ?></a>
-            <a href="#scrollMenu"         class="middleScroll"  ><?php echo LE_CHEF ?></a>
+            <a href="#scrollMenu"         class="middleScroll"  ><?php echo MENU ?></a>
             <a href="#scrollContact"      class="middleScroll"  ><?php echo RESERVATION_MAJ ?></a>
           </nav>
         </div>
@@ -91,19 +94,19 @@
           <a class ="menuLink3"><?php echo CARTE ?></a>
         </nav>
         <div class="menu_text vertical_layout">
-          <h2><?php echo ENTREE ?></h2>
+          <h2 class="start_course"><?php echo ENTREE ?></h2>
           <ul class="vertical_layout menuDisplayer">
             <li>Salade lyonnaise</li>
             <li>Saumon tiède, salade de Roquette au Wasabi</li>
             <li>Foie gras, mélange du jardin</li>
           </ul>
-          <h2><?php echo PLAT ?></h2>
+          <h2 class="main_course"><?php echo PLAT ?></h2>
           <ul class="vertical_layout menuDisplayer">
             <li>Soufflé de brochet, crème d'écrevisse</li>
             <li>Andouillette de Bobosse à la ficelle</li>
             <li>Magret de canard "France" poelé</li>
           </ul>
-          <h2><?php echo DESSERT ?></h2>
+          <h2 class="dessert"><?php echo DESSERT ?></h2>
           <ul class="vertical_layout menuDisplayer">
             <li>Cervelle de canut ou fromage blanc</li>
             <li>Plateau de fromage</li>
@@ -112,7 +115,16 @@
           <p class="price">(<?php echo PRIX ?> : 35€)</P>
         </div>
 
-        <script charset="UTF-8" src="js/menuReader.js" type="text/javascript"></script>
+        <script>
+          var lang = '<?php echo $lang ?>';
+          var entree = '<?php echo ENTREE ?>';
+          var plat = '<?php echo PLAT ?>';
+          var dessert = '<?php echo DESSERT ?>';
+        </script>
+        <script charset="UTF-8" src="http://lesadrets.esy.es/js/carte_Html_Modif.js" type="text/javascript"></script>
+
+        
+        <script charset="UTF-8" src="http://lesadrets.esy.es/js/menuR.js" type="text/javascript"></script>
 
       </section>
 
@@ -122,7 +134,7 @@
         <div id="scrollContact" class="_waypoint"></div>
 
         <div class="booking">
-          <form method="post" action="scriptPhpOuJavaACreer">       
+          <form method="post" action="sendMail.php">       
             <fieldset class="horizontal_layout medium_vertical espaced reservation">
               <legend><?php echo RESERVATION ?></legend>
               

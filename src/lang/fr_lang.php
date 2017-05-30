@@ -5,13 +5,14 @@
 	define('RESERVATION_MAJ', 'RESERVATIONS');
 	define('LE_RESTAURANT', 'Le Restaurant');
 	define('RESTAURANT_ADRETS', 'Restaurant Les Adrets');
-	define('LE_CHEF', 'LE CHEF');
+	define('LE_CHEF_HEAD', 'LE CHEF');
+	define('LE_CHEF', 'Le Chef');	
 	define('MENU', 'MENU');
 	define('AUJOURDHUI', 'AUJOURD\'HUI');
 	define('CARTE', 'CARTE');
 	define('ENTREE', '- Entrée -');
 	define('PLAT', '- Plat -');
-	define('DESSERT','- Desserts -');
+	define('DESSERT','- Desserts -');						
 	define('PRIX', 'Prix');
 	define('ADRESSE', 'Adresse');
 	define('HORAIRE', 'Les horaires');
@@ -35,6 +36,7 @@
 	define('RESERVATION_PLUS_5PERSONNES', 'Pour les réservations de plus de cinq personnes, contactez nous par telephone.');
 	define('ENVOYER_RESERVATION', 'Envoyer la réservation');
 	define('COORDONNEE', 'Coordonnées');
+
 
 
 ?>

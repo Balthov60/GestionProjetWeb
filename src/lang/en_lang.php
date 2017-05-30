@@ -5,7 +5,8 @@
 	define('RESERVATION_MAJ', 'BOOKING');
 	define('LE_RESTAURANT', 'The Restaurant');
 	define('RESTAURANT_ADRETS', 'Restaurant Les Adrets');
-	define('LE_CHEF', 'THE HEAD CHEF');
+	define('LE_CHEF_HEAD', 'THE HEAD CHEF');
+	define('LE_CHEF', 'The Head Chef');	
 	define('MENU', 'MENU');
 	define('AUJOURDHUI', 'TODAY');
 	define('CARTE', 'MENU (OTHER)');
