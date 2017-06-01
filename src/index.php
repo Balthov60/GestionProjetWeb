@@ -97,6 +97,7 @@
           <a class ="menuLink3"><?php echo CARTE ?></a>
         </nav>
         <div class="menu_text vertical_layout">
+          <div class="text_padding">
           <h2 class="start_course"><?php echo ENTREE ?></h2>
           <ul class="vertical_layout menuDisplayer">
             <li>Salade lyonnaise</li>
@@ -115,7 +116,11 @@
             <li>Plateau de fromage</li>
             <li>Carte des desserts</li>
           </ul>
-          <p class="price">(<?php echo PRIX ?> : 35€)</P>
+          <p class="price">(<?php echo PRIX ?> : 35€)</p>
+          <div class="horizontal_layout espaced" id="arrow_container">
+            <img src="images/arrow_left.png" id="arrow_left" class="arrow" />
+            <img src="images/arrow_right.png" id="arrow_right" class="arrow" />
+          </div>
         </div>
 
         <script>
