@@ -5,7 +5,6 @@ var menutext2 = "http://lesadrets.esy.es/menu/2.txt";
 var menutext3 = "http://lesadrets.esy.es/menu/3.txt";
 
 window.onload = loadFile(menutext1);
-window.onload = alert("Load");
 
 
 function loadFile(file) {
@@ -24,15 +23,15 @@ function loadFile(file) {
             setMainCourse(plateTypeArray);
             setDessert(plateTypeArray);
             setPrice(plateTypeArray);
-
         }
+
+    });
 
     xhr.send(null); // La requête est prête, on envoie tout !
 }
 
 function setEntry(plateTypeArray)
 {
-    alert("setEntry()");
     var plateArray = plateTypeArray[0].split(';');
     var htmlCode = ' ';
     for(var i = 0; i < plateArray.length; i++)
@@ -45,7 +44,6 @@ function setEntry(plateTypeArray)
 
 function setMainCourse(plateTypeArray)
 {
-    alert("setMainCourse()");
     htmlCode = ' ';
     plateArray = plateTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
@@ -58,7 +56,6 @@ function setMainCourse(plateTypeArray)
 
 function setDessert(plateTypeArray)
 {
-    alert("setDessert()");
     htmlCode = ' ';
     plateArray = plateTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
@@ -79,7 +76,6 @@ function setPrice(plateTypeArray)
 
   	document.getElementsByClassName('menuLink1')[0]
         .addEventListener('click', function (event) {
-            alert("Clique");
             loadFile(menutext1);          
         });
 

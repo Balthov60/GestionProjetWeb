@@ -1,6 +1,6 @@
 windows.onload = function() {
 
-    var menutext1 = "http://lesadrets.esy.es/menu/menu1.txt";
+    var menutext1 = "http://lesadrets.esy.es/menu/1.txt";
   
     var xhr = new XMLHttpRequest();
 

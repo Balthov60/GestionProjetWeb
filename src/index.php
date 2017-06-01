@@ -98,7 +98,7 @@
         <div class="menu_text vertical_layout">
           <h2 class="start_course"><?php echo ENTREE ?></h2>
           <ul class="vertical_layout menuDisplayer">
-            <li>Erreur de Lecture du fichier</li>
+            <li>Erreur de Lecture </li>
           </ul>
           <h2 class="main_course"><?php echo PLAT ?></h2>
           <ul class="vertical_layout menuDisplayer">
@@ -119,7 +119,7 @@
         </script>
 
         <script charset="UTF-8" src="http://lesadrets.esy.es/js/carte_Html_Modif.js" type="text/javascript"></script>      
-        <script charset="UTF-8" src="http://lesadrets.esy.es/js/menuR.js" type="text/javascript"></script>
+        <script charset="UTF-8" src="http://lesadrets.esy.es/js/menuReader.js" type="text/javascript"></script>
 
       </section>
 
