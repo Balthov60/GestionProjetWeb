@@ -335,6 +335,19 @@ header .main_navigation
   margin: 2px 0px;
 }
 
+.arrow
+{
+  width: 10%;
+  height: auto;
+}
+
+#arrow_container
+{
+  width: 100%;
+  position: relative;
+  bottom: 50%;
+}
+
 /***********/
 /* contact */
 /***********/

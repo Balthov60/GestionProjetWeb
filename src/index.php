@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    
+    <!-- Lang Handling -->
     <?php
       if(isset($_GET['lang']))
         $lang = $_GET['lang'];
@@ -13,13 +14,15 @@
       else
         include('lang/fr_lang.php');
     ?>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width"/>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
     <title>Les Adrets</title>
 
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
@@ -108,7 +111,11 @@
           <ul class="vertical_layout menuDisplayer">
             
           </ul>
-          <p class="price">(<?php echo PRIX ?> : 35€)</P>
+          <p class="price">(<?php echo PRIX ?> : 35€)</p>
+          <div class="horizontal_layout espaced" id="arrow_container">
+            <img src="images/arrow_left.png" id="arrow_left" class="arrow" />
+            <img src="images/arrow_right.png" id="arrow_right" class="arrow" />
+          </div>
         </div>
 
         <script>
@@ -118,8 +125,9 @@
           var dessert = '<?php echo DESSERT ?>';
         </script>
 
-        <script charset="UTF-8" src="http://lesadrets.esy.es/js/carte_Html_Modif.js" type="text/javascript"></script>      
-        <script charset="UTF-8" src="http://lesadrets.esy.es/js/menuReader.js" type="text/javascript"></script>
+        <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
+        <script charset="UTF-8" src="./js/menuRead.js" type="text/javascript"></script>
+
 
       </section>
 
