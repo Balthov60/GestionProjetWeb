@@ -144,7 +144,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
             setArrowsFollowingIndex(arrowIndex);
  
-        }) 
+        });
+
+        $('.menuLink1').click(function(){
+            arrowIndex = 0;
+            loadFile(jsFileArray[arrowIndex]); 
+            $('#arrow_right').show();
+        });
     });
 </script>
 

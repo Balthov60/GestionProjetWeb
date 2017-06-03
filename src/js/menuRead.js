@@ -1,9 +1,9 @@
 
-var dailyMeal = "http://lesadrets.esy.es/menu/dailyMeal.txt";
-var menu = "http://lesadrets.esy.es/menu/menu.txt";
+var dailyMeal = "./menu/dailyMeal.txt";
+var menu = "./menu/menu.txt";
 
-function loadFile(file) {
-  
+function loadFileReadMenu(file) {
+
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -67,16 +67,16 @@ function setPrice(plateTypeArray)
 }
 
 
-(function() { // Comme d'habitude, une IIFE pour éviter les variables globales
-    document.getElementsByClassName('menuLink2')[0]
-        .addEventListener('click', function (event) {
-            loadFile(dailyMeal);
-        });
+$(document).ready(function(){
 
-    document.getElementsByClassName('menuLink3')[0]
-        .addEventListener('click', function (event) {
-            loadFile(menu);
-        });
+    $('.menuLink2').click(function() {
+        loadFileReadMenu(dailyMeal);
+        $('.arrow').hide();
+    });
 
-})();
+    $('.menuLink3').click(function(){
+        loadFileReadMenu(menu);
+        $('.arrow').hide();
+    });
+});
 
