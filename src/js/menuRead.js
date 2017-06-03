@@ -2,7 +2,6 @@
 var dailyMeal = "http://lesadrets.esy.es/menu/dailyMeal.txt";
 var menu = "http://lesadrets.esy.es/menu/menu.txt";
 
-alert('oui');
 function loadFile(file) {
   
     var xhr = new XMLHttpRequest();

@@ -30,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function loadFile(file) {
         var chemin = 'menu/main_Meals/';
         file = chemin + file;
-        alert(file);
-
         var xhr = new XMLHttpRequest();
         // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
         xhr.open('GET', file);
