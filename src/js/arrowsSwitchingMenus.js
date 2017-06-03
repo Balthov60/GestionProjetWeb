@@ -1,11 +1,9 @@
-windows.onload = function() {
-
-    var menutext1 = "http://lesadrets.esy.es/menu/1.txt";
+function loadFile(file) {
   
     var xhr = new XMLHttpRequest();
 
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-    xhr.open('GET', menutext1);
+    xhr.open('GET', file);
     xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 
     xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
@@ -22,7 +20,6 @@ windows.onload = function() {
 
     xhr.send(null); // La requête est prête, on envoie tout !
 }
-
 
 function setEntry(plateTypeArray)
 {
@@ -64,3 +61,24 @@ function setPrice(plateTypeArray)
     var price = plateTypeArray[3];
     document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
 }
+
+
+
+
+
+(function() { // Comme d'habitude, une IIFE pour éviter les variables globales
+
+  	document.getElementsByClassName('arrow')[0]
+        .addEventListener('click', function (event) {
+            var test = "<?php echo \'Fleche gauche\' ; ?>";
+            alert(test);         
+        });
+
+    document.getElementsByClassName('arrow')[1]
+        .addEventListener('click', function (event) {
+            alert('Fleche droite');
+        });
+
+
+})();
+

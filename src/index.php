@@ -23,14 +23,12 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="basic_style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-
-  <script charset="UTF-8" src="http://lesadrets.esy.es/js/onloadMenuDisplay.js" type="text/javascript"></script>  
 
   <body>
     <div id="main_content">
@@ -123,10 +121,13 @@
           var entree = '<?php echo ENTREE ?>';
           var plat = '<?php echo PLAT ?>';
           var dessert = '<?php echo DESSERT ?>';
+          var arrowIndex = 0;
         </script>
 
         <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
         <script charset="UTF-8" src="./js/menuRead.js" type="text/javascript"></script>
+        <?php include './js/arrowsSwitchingMenus.php'; ?>
+
 
 
       </section>

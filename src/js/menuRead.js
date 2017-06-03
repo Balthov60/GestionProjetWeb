@@ -1,12 +1,8 @@
 
+var dailyMeal = "http://lesadrets.esy.es/menu/dailyMeal.txt";
+var menu = "http://lesadrets.esy.es/menu/menu.txt";
 
-var menutext1 = "http://lesadrets.esy.es/menu/1.txt";
-var menutext2 = "http://lesadrets.esy.es/menu/2.txt";
-var menutext3 = "http://lesadrets.esy.es/menu/3.txt";
-
-window.onload = loadFile(menutext1);
-
-
+alert('oui');
 function loadFile(file) {
   
     var xhr = new XMLHttpRequest();
@@ -73,20 +69,14 @@ function setPrice(plateTypeArray)
 
 
 (function() { // Comme d'habitude, une IIFE pour éviter les variables globales
-
-  	document.getElementsByClassName('menuLink1')[0]
-        .addEventListener('click', function (event) {
-            loadFile(menutext1);          
-        });
-
     document.getElementsByClassName('menuLink2')[0]
         .addEventListener('click', function (event) {
-            loadFile(menutext2);
+            loadFile(dailyMeal);
         });
 
     document.getElementsByClassName('menuLink3')[0]
         .addEventListener('click', function (event) {
-            loadFile(menutext3);
+            loadFile(menu);
         });
 
 })();
