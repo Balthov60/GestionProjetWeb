@@ -1,7 +1,7 @@
 <?php
     $index = 0;
     $fileConcat = '' ;
-    $dir = "C:/wamp64/www/testlesadrets/src/menu/main_Meals";
+    $dir = "menu/main_Meals";
     $dh  = opendir($dir);
     while (false !== ($filename = readdir($dh))) {
         $filesArray[] = $filename;
