@@ -125,19 +125,11 @@
           var dessert = '<?php echo DESSERT ?>';
           var arrowIndex = 0;
         </script>
-<<<<<<< HEAD
+
 
         <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
         <script charset="UTF-8" src="./js/menuRead.js" type="text/javascript"></script>
         <?php include './js/arrowsSwitchingMenus.php'; ?>
-
-
-=======
-        <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
-
-        
-        <script charset="UTF-8" src="./js/menuR.js" type="text/javascript"></script>
->>>>>>> 505f061420668e837fe45b2e979bf72fd3839aa3
 
       </section>
 
