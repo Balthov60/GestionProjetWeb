@@ -23,7 +23,8 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     
-    <link rel="stylesheet" href="basic_style.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
 
@@ -97,6 +98,7 @@
           <a class ="menuLink3"><?php echo CARTE ?></a>
         </nav>
         <div class="menu_text vertical_layout">
+          <div class="text_padding">
           <h2 class="start_course"><?php echo ENTREE ?></h2>
           <ul class="vertical_layout menuDisplayer">
             <li>Erreur de Lecture </li>
@@ -123,12 +125,19 @@
           var dessert = '<?php echo DESSERT ?>';
           var arrowIndex = 0;
         </script>
+<<<<<<< HEAD
 
         <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
         <script charset="UTF-8" src="./js/menuRead.js" type="text/javascript"></script>
         <?php include './js/arrowsSwitchingMenus.php'; ?>
 
 
+=======
+        <script charset="UTF-8" src="./js/carte_Html_Modif.js" type="text/javascript"></script>
+
+        
+        <script charset="UTF-8" src="./js/menuR.js" type="text/javascript"></script>
+>>>>>>> 505f061420668e837fe45b2e979bf72fd3839aa3
 
       </section>
 
