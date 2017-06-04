@@ -44,7 +44,7 @@
 {
   body
   {
-    background: url('images/background.png') no-repeat fixed center;
+    background: url('images/background/background.png') no-repeat fixed center;
   }
 }
 
@@ -100,7 +100,7 @@ section
   margin-top: 20px;
   margin-bottom: 20px;
   
-  background:url(images/menu.jpg) no-repeat left;
+  background:url(images/background/background_menu_1.jpg) no-repeat left;
   background-size: auto 100%;
 }
 

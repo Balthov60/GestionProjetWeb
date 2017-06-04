@@ -262,7 +262,7 @@ header .main_navigation
 
 .slideshow
 {
-  background: url('images/white.jpg') no-repeat center;
+  background: url('images/utilities/white.jpg') no-repeat center;
   background-size: auto 100%;
   margin: 20px 10px;
 }

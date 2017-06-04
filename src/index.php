@@ -15,13 +15,12 @@
         include('lang/fr_lang.php');
     ?>
     
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    
     <title>Les Adrets</title>
+    <link rel="shortcut icon" href="images/logos/logo.png" type="image/x-icon"/>
+    <link rel="icon"          href="images/logos/logo.png" type="image/x-icon"/>
 
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
-    <link rel="icon" href="images/logo.png" type="image/x-icon"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" /> <!-- For smartphone/tablet responsive -->
     
     <link rel="stylesheet" href="style.css" />
 
@@ -36,14 +35,14 @@
       <header class="horizontal_layout small_vertical">
 
         <div class="title horizontal_layout">
-          <img src="images/logo.png" alt="Logo restaurant"/>
+          <img src="images/logos/logo.png" alt="Logo restaurant"/>
           <h1><?php echo RESTAURANT_ADRETS ?></h1>
         </div>
         <div class="horizontal_layout small_vertical navigation">
           <nav class="language">
             <ul class="horizontal_layout">
-              <li><a href="index.php?lang=fr"><img src="images/french.png" alt="Logo francais" /></li></a>
-              <li><a href="index.php?lang=en"><img src="images/english.png" alt="Logo anglais" /></li></a>
+              <li><a href="index.php?lang=fr"><img src="images/logos/french.png" alt="Logo francais" /></li></a>
+              <li><a href="index.php?lang=en"><img src="images/logos/english.png" alt="Logo anglais" /></li></a>
             </ul>
           </nav>
           
@@ -59,7 +58,7 @@
       <section id="restaurant_history" class="history horizontal_layout medium_vertical_reverse">
     		
         <div class="slideshow">
-          <img src="images/white.jpg" alt="photo plat" class="photos fade" />
+          <img src="images/utilities/white.jpg" alt="photo plat" class="photos fade" />
         </div>
         <div class="history_text">
           <h2><?php echo LE_RESTAURANT ?></h2>
@@ -76,7 +75,7 @@
         <div id="scrollChief" class="_waypoint"></div>
 
         <div class="slideshow">
-          <img src="images/white.jpg" alt="photo plat" class="photos fade"/>
+          <img src="images/utilities/white.jpg" alt="photo plat" class="photos fade"/>
         </div>
         <div class="history_text">
           <h2><?php echo LE_CHEF ?></h2>
@@ -113,8 +112,8 @@
           </ul>
           <p class="price">(<?php echo PRIX ?> : 35€)</p>
           <div class="horizontal_layout espaced" id="arrow_container">
-            <img src="images/arrow_left.png" id="arrow_left" class="arrow" />
-            <img src="images/arrow_right.png" id="arrow_right" class="arrow" />
+            <img src="images/utilities/arrow_left.png" id="arrow_left" class="arrow" />
+            <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
           </div>
         </div>
 
@@ -229,13 +228,13 @@
     <nav id="link_aside" class="main_navigation">
       <ul>
         <li>
-          <img src="images/side_button_full.png" href="#scrollHistory" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button_full.png" href="#scrollHistory" class="asideButton middleScroll" alt="button"/>
         </li>
         <li>
-          <img src="images/side_button.png" href="#scrollMenu" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button.png" href="#scrollMenu" class="asideButton middleScroll" alt="button"/>
         </li>
         <li>
-          <img src="images/side_button.png" href="#scrollContact" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button.png" href="#scrollContact" class="asideButton middleScroll" alt="button"/>
         </li>
       </ul>
     </nav> 

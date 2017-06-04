@@ -10,9 +10,9 @@ function placeAside() {
 
 function changeColor(button) {
 	for (var i = 0; i < asideNavigationItems.length; i++) {
-		asideNavigationItems[i].src = 'images/side_button.png';
+		asideNavigationItems[i].src = 'images/utilities/side_button.png';
 	}
-	button.src = 'images/side_button_full.png'
+	button.src = 'images/utilities/side_button_full.png'
 }
 
 var asideNavigationItems = document.getElementsByClassName("asideButton");

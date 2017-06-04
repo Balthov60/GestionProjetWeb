@@ -205,7 +205,7 @@ section
 {
   .menu
   {
-    background:url(images/background_menu.png) no-repeat center;
+    background:url(images/background/background_menu_small.png) no-repeat center;
     background-size: auto 100%;
   }
 }
