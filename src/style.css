@@ -335,17 +335,28 @@ header .main_navigation
   margin: 2px 0px;
 }
 
+#menu_text
+{
+  position: relative;
+}
+
 .arrow
 {
   width: 10%;
   height: auto;
+
+  position: absolute;
+  top: 50%;
 }
 
-#arrow_container
+#arrow_right
 {
-  width: 100%;
-  position: relative;
-  bottom: 50%;
+  right: 0%;
+}
+
+#arrow_left
+{
+  left: 0%;
 }
 
 /***********/

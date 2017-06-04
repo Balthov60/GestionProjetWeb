@@ -77,27 +77,25 @@
           <a class="menuLink3 menuLink" id="menuLinkMenu"  ><?php echo CARTE ?></a>
         </nav>
 
-        <div class="menu_text vertical_layout">
+        <div id="menu_text" class="menu_text vertical_layout">
           <div class="text_padding">
-          
-          <h2 class="start_course"><?php echo ENTREE ?></h2>
-          <ul class="vertical_layout menuDisplayer">
-            <li>Erreur de Lecture </li>
-          </ul>
+            <h2 class="start_course"><?php echo ENTREE ?></h2>
+            <ul class="vertical_layout menuDisplayer">
+              <li>Erreur de Lecture </li>
+            </ul>
 
-          <h2 class="main_course"><?php echo PLAT ?></h2>
-          <ul class="vertical_layout menuDisplayer">  
-          </ul>
+            <h2 class="main_course"><?php echo PLAT ?></h2>
+            <ul class="vertical_layout menuDisplayer">  
+            </ul>
 
-          <h2 class="dessert"><?php echo DESSERT ?></h2>
-          <ul class="vertical_layout menuDisplayer">  
-          </ul>
+            <h2 class="dessert"><?php echo DESSERT ?></h2>
+            <ul class="vertical_layout menuDisplayer">  
+            </ul>
 
-          <p class="price">(<?php echo PRIX ?> : 35€)</p>
-          <div class="horizontal_layout espaced" id="arrow_container">
-            <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
-            <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
+            <p class="price">(<?php echo PRIX ?> : 35€)</p>
           </div>
+          <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
+          <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
         </div>
 
         <script>
