@@ -21,8 +21,7 @@
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
 
-    <!-- JS -->
-    <script type="text/javascript" src="./js/ajaxSubmitForm.js"></script>
+    
 
   </head>
 
@@ -121,7 +120,7 @@
       <div id="scrollContact" class="waypoint"></div>
 
       <div class="booking">
-        <form method="post" action="sendMail.php">       
+        <form method="post" action="sendMail.php" name ="booking">       
           <fieldset class="horizontal_layout medium_vertical espaced reservation">
             <legend><?php echo RESERVATION ?></legend>
             
@@ -168,7 +167,7 @@
             
             <div class="validation">
               <p><?php echo RESERVATION_PLUS_5PERSONNES ?></p>
-              <input type="button"  onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+              <input type="button" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
             </div>
           </div>
         </form>
@@ -224,6 +223,7 @@
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
+    <script src="js/ajaxSubmitForm.js"></script>
 
   </body>
 </html>

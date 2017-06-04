@@ -30,12 +30,14 @@ function AJAX(url){
  
              
 function submitForm(){
-    var form = document.forms["bookingForm"];
+    var form = document.forms["booking"];
     var lastName = form.Lastname.value;
     var firstName = form.firstname.value;
     var email = form.email.value;
     var tel = form.tel.value;
+
     var url = "php/dataHandler.php?lastName="+lastName+"&firstName="+firstName+"&email="+email+"&tel="+tel; 
+    
 
     /* Pour passer des paramètres en php on les met dans l'url
 	et ensuite dans le script on les chope avec $_GET[ton_parametre];
@@ -43,7 +45,6 @@ function submitForm(){
     */
 
     var testField = AJAX(url);        
-    
     if(testField != "noNeedAlert")
     	alert(testField);
 }
