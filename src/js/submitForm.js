@@ -62,16 +62,18 @@ function submitForm() {
    	var hour = form.hour.value;
    	var commentary = form.text.value;
 
-   	/* Format Message */
-    var message = "Reservation pour " + qty + " personne(s) le " + date + " à " + hour 
-    			+ "\nNom: " + lastName
-    			+ "\nPrenom: " + firstName
-    			+ "\nMail: " + email 
-    			+ "\nTéléphone: " + tel
-    			+ "\nCommentaire: " + commentary
-    alert(message);
+   	// Confirmation du mail ? amélioration possible, à garder.
+   	/* Format Message */ 
+    // var message = "Reservation pour " + qty + " personne(s) le " + date + " à " + hour 
+    // 			+ "\nNom: " + lastName
+    // 			+ "\nPrenom: " + firstName
+    // 			+ "\nMail: " + email 
+    // 			+ "\nTéléphone: " + tel
+    // 			+ "\nCommentaire: " + commentary
+    // alert(message);
 
-    var request = "php/sendMail.php?message=" + message;
+    /* Format Request */
+    var request = "php/sendMail.php?date=" + date + "&hour=" + hour + "&qty=" + qty + "&lastName=" + lastName + "&firstName=" + firstName + "&email=" + email + "&tel=" + tel + "&commentary=" + commentary;
 
     /* Send Mail */
     var testField = sendMail(request);
