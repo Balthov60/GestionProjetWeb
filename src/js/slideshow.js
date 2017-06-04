@@ -13,9 +13,14 @@ var i;
 var smoothDelay = 25;
 var smoothRate = 0.05;
 
-function run() {
-	smooth();
+// Init Background
+index++
+for (i = 0; i < background.length; i++) {
+	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
 }
+
+// Circle call methods. TODO: Find Cleaner Way ?
+setTimeout(smooth, 5000);
 
 function smooth() {
 	if (opacity < 1) {
@@ -27,19 +32,6 @@ function smooth() {
 	}
 	else {
 		changePicture();
-	}
-}
-
-function invertSmooth() {
-	if (opacity > 0) {
-		opacity -= smoothRate;
-		for (i = 0; i < images.length; i++) {
-		    images[i].style.opacity = opacity;
-		}
-		setTimeout(invertSmooth, smoothDelay);
-	}
-	else {
-		setTimeout(run, 5000);
 	}
 }
 
@@ -56,8 +48,15 @@ function changePicture() {
 	setTimeout(invertSmooth, smoothDelay);
 }
 
-index++
-for (i = 0; i < background.length; i++) {
-	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
+function invertSmooth() {
+	if (opacity > 0) {
+		opacity -= smoothRate;
+		for (i = 0; i < images.length; i++) {
+		    images[i].style.opacity = opacity;
+		}
+		setTimeout(invertSmooth, smoothDelay);
+	}
+	else {
+		setTimeout(smooth, 5000);
+	}
 }
-setTimeout(run, 5000);
