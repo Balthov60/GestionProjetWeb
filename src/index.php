@@ -47,9 +47,9 @@
           </nav>
           
           <nav class="main_navigation text_navigation horizontal_layout">
-            <a href="#scrollHistory"      class="middleScroll"  ><?php echo ACCUEIL ?></a>
-            <a href="#scrollMenu"         class="middleScroll"  ><?php echo MENU ?></a>
-            <a href="#scrollContact"      class="middleScroll"  ><?php echo RESERVATION_MAJ ?></a>
+            <a href="#scrollHistory"      class="scrollButton"  ><?php echo ACCUEIL ?></a>
+            <a href="#scrollMenu"         class="scrollButton"  ><?php echo MENU ?></a>
+            <a href="#scrollContact"      class="scrollButton"  ><?php echo RESERVATION_MAJ ?></a>
           </nav>
         </div>
         
@@ -228,13 +228,13 @@
     <nav id="link_aside" class="main_navigation">
       <ul>
         <li>
-          <img src="images/utilities/side_button_full.png" href="#scrollHistory" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button_full.png" href="#scrollHistory" class="asideButton scrollButton" alt="button"/>
         </li>
         <li>
-          <img src="images/utilities/side_button.png" href="#scrollMenu" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button.png" href="#scrollMenu" class="asideButton scrollButton" alt="button"/>
         </li>
         <li>
-          <img src="images/utilities/side_button.png" href="#scrollContact" class="asideButton middleScroll" alt="button"/>
+          <img src="images/utilities/side_button.png" href="#scrollContact" class="asideButton scrollButton" alt="button"/>
         </li>
       </ul>
     </nav> 
