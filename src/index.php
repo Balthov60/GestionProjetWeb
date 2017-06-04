@@ -20,9 +20,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
-
-    
-
   </head>
 
   <body>
@@ -120,12 +117,14 @@
       <div id="scrollContact" class="waypoint"></div>
 
       <div class="booking">
-        <form method="post" action="sendMail.php" name ="booking">       
+        <form method="post" action="" name="booking">       
           <fieldset class="horizontal_layout medium_vertical espaced reservation">
             <legend><?php echo RESERVATION ?></legend>
             
-            <label><?php echo DATE_HEURE ?> </label><input placeholder="dd/mm" type="date" id="date" name="date"/>
-            <select name="pays" id="pays">
+            <label><?php echo DATE_HEURE ?></label>
+            <input placeholder="dd/mm" type="date" id="date" name="date"/>
+
+            <select name="hour" id="hour">
               <optgroup label="Déjeuner :">
                 <option>12h00</option>
                 <option>12h30</option>
@@ -144,7 +143,7 @@
                </optgroup>
             </select>
             
-            <label><?php echo NOMBRE_CONVIVE ?> </label><input placeholder="1" type="number" id="number" name="number"/>
+            <label><?php echo NOMBRE_CONVIVE ?> </label><input placeholder="1" type="number" id="number" name="number" value="1" />
           </fieldset>
           
           <fieldset>
@@ -155,11 +154,11 @@
           <div class="horizontal_layout very_small_vertical">
             <fieldset class="details">
               <legend><?php echo COORDONNEE ?></legend>
-              <input name="Lastname" id="lastname_input" placeholder="<?php echo NOM ?>" type="text">
+              <input name="lastname" id="lastname_input" placeholder="<?php echo NOM ?>" type="text">
               <br>
               <input name="firstname" id="firstname_input" placeholder="<?php echo PRENOM ?>" type="text">
               <br>
-              <input name="email" id="email_input" placeholder="<?php echo MAIL ?>" type="email">
+              <input name="email" id="email_input" placeholder="<?php echo MAIL ?>" type="text">
               <br>
               <input name="tel" id="tel_input" placeholder="<?php echo TELEPHONE ?>" type="tel">
               <br>
@@ -223,7 +222,7 @@
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
-    <script src="js/ajaxSubmitForm.js"></script>
+    <script src="js/submitForm.js"></script>
 
   </body>
 </html>
