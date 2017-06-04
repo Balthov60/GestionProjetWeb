@@ -77,7 +77,7 @@
           <a class="menuLink3 menuLink" id="menuLinkMenu"  ><?php echo CARTE ?></a>
         </nav>
 
-        <div id="menu_text" class="menu_text vertical_layout">
+        <div class="menu_text vertical_layout">
           <div class="text_padding">
             <h2 class="start_course"><?php echo ENTREE ?></h2>
             <ul class="vertical_layout menuDisplayer">

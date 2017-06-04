@@ -41,7 +41,7 @@ function menuClick() {
       $('.menu_text .start_course').html('- Wines -');
       $('.menu_text .main_course').html('- Without Alcohol -');
       $('.menu_text .dessert').html('- Pre-Dinner -');
-    }x
+    }
   // $('.menuDisplayer').css({'font-size' : '0.7em', 'list-style' : 'circle', 'text-align' : 'left', '-moz-columns': '2'});  
 }
 

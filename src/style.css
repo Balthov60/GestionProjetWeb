@@ -313,6 +313,8 @@ header .main_navigation
 
 .menu_text
 {
+  position: relative;
+
   border: 1px solid;
   padding: 10px 20px;
   
@@ -335,14 +337,9 @@ header .main_navigation
   margin: 2px 0px;
 }
 
-#menu_text
-{
-  position: relative;
-}
-
 .arrow
 {
-  width: 10%;
+  width: 8%;
   height: auto;
 
   position: absolute;
