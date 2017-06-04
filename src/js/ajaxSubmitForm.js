@@ -44,6 +44,6 @@ function submitForm(){
 
     var testField = AJAX(url);        
     
-    if(testField == "haveToAlert")
-    	alert("Vous devez remplir tous les champs");
+    if(testField != "noNeedAlert")
+    	alert(testField);
 }
