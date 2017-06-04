@@ -109,8 +109,6 @@
           var arrowIndex = 0;
         </script>
 
-        <script charset="UTF-8" src="./js/menuRead.js"         type="text/javascript"></script>
-        <?php include './php/arrowsSwitchingMenus.php'; ?>
 
       </section>
 
@@ -224,6 +222,12 @@
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
     <script src="js/ajaxSubmitForm.js"></script>
+    <script src="./js/menuRead.js"></script>
+
+
+    <!-- PHP -->
+    <?php include './php/arrowsSwitchingMenus.php'; ?>
+
 
   </body>
 </html>

@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  resetHighlight();
+  highlight($('#menuLinkMeal'));
+});
+
+
+
 /* Assign Click for Menu */
 
 $('#menuLinkMeal').click(function() {
@@ -44,6 +51,8 @@ function menuClick() {
     }
   // $('.menuDisplayer').css({'font-size' : '0.7em', 'list-style' : 'circle', 'text-align' : 'left', '-moz-columns': '2'});  
 }
+
+
 
 function resetHighlight() {
   $('.menuLink').css('background', '#FFFFFF');

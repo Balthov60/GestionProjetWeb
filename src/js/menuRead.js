@@ -31,7 +31,7 @@ function setEntry(plateTypeArray)
     var htmlCode = ' ';
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
     }
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
@@ -43,7 +43,7 @@ function setMainCourse(plateTypeArray)
     plateArray = plateTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
     }
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
@@ -55,7 +55,7 @@ function setDessert(plateTypeArray)
     plateArray = plateTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
     }
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }
