@@ -1,5 +1,6 @@
 <?php
+	$tonMessage = "blabla";
 	if($_GET['lastName'] == '' || $_GET['firstName'] == '' || $_GET['email'] == '' || $_GET['tel'] == '')
-		echo 'haveToAlert';
+		echo $tonMessage; //on  crée le code html de la variable pour pouvoir l'utiliser en JS
 	
 ?>
