@@ -4,9 +4,13 @@
 	define('MENUS', 'MENUS');
 	define('RESERVATION_MAJ', 'RESERVATIONS');
 	define('LE_RESTAURANT', 'Le Restaurant');
+	define('LE_RESTAURANT_TEXTE', 'Lorem ipsum dolor sit amet, te scripta nostrum ius, est alii magna cu. Invidunt consulatu ne cum. Te qui prima 								   adolescens, inermis nonumes no vel. Sea et enim probatus, cum et veri quas iusto, offendit delectus vulputate no mel. 							Phaedrum efficiantur definitionem ea eum, te mea mundi quodsi.
+            				 	   Eu etiam verear fuisset duo, accusam scriptorem nec an. Mel cibo liber euripidis cu, nostrud minimum ut eam, mei timeam tibique interpretaris in. Qui nullam libris quaeque ne. Pri saepe prompta aliquam in.');
 	define('RESTAURANT_ADRETS', 'Restaurant Les Adrets');
 	define('LE_CHEF_HEAD', 'LE CHEF');
-	define('LE_CHEF', 'Le Chef');	
+	define('LE_CHEF', 'Le Chef');
+	define('LE_CHEF_TEXTE', 'Lorem ipsum dolor sit amet, te scripta nostrum ius, est alii magna cu. Invidunt consulatu ne cum. Te qui prima adolescens, 					 inermis nonumes no vel. Sea et enim probatus, cum et veri quas iusto, offendit delectus vulputate no mel. Phaedrum 							 efficiantur definitionem ea eum, te mea mundi quodsi.
+            				 Eu etiam verear fuisset duo, accusam scriptorem nec an. Mel cibo liber euripidis cu, nostrud minimum ut eam, mei timeam tibique interpretaris in. Qui nullam libris quaeque ne. Pri saepe prompta aliquam in.');
 	define('MENU', 'MENU');
 	define('AUJOURDHUI', 'AUJOURD\'HUI');
 	define('CARTE', 'CARTE');

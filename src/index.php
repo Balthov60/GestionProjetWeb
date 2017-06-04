@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <!-- Lang Handling -->
-    <?php
-      if(isset($_GET['lang']))
-        $lang = $_GET['lang'];
-      else 
-        $lang = 'fr';
+  <head>    
+    <title>Les Adrets</title>
+    <link rel="shortcut icon" href="images/logos/logo.png" type="image/x-icon"/>
+    <link rel="icon"          href="images/logos/logo.png" type="image/x-icon"/>
 
-      if($lang == 'en')
-        include('lang/en_lang.php');
-      else
-        include('lang/fr_lang.php');
-    ?>
+    <meta charset="utf-8" />
+
+    <!-- For smartphone & tablet responsive -->
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
+    <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
+
+    <!-- Lang Handling -->
+    <?php include('php/lang_handling.php'); ?>
+  </head>
     
     <title>Les Adrets</title>
     <link rel="shortcut icon" href="images/logos/logo.png" type="image/x-icon"/>
