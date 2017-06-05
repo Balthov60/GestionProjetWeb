@@ -26,11 +26,24 @@ function loadFileReadMenu(file) {
 
 function setEntry(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
     var plateArray = plateTypeArray[0].split(';');
     var htmlCode = ' ';
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
+
+         if(plateArray[i].length > 41)
+            nbOfTooLongString++;
+    }
+
+    while((lineCounter - nbOfTooLongString) != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
@@ -38,11 +51,25 @@ function setEntry(plateTypeArray)
 
 function setMainCourse(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
+
     htmlCode = ' ';
     plateArray = plateTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
+
+         if(plateArray[i].length > 41)
+            nbOfTooLongString++;
+    }
+
+    while((lineCounter- nbOfTooLongString) != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
@@ -50,11 +77,25 @@ function setMainCourse(plateTypeArray)
 
 function setDessert(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
+
     htmlCode = ' ';
     plateArray = plateTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
+
+         if(plateArray[i].length > 41)
+            nbOfTooLongString++;
+    }
+
+     while((lineCounter- nbOfTooLongString) <= nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }

@@ -49,23 +49,55 @@ function loadFile(file) {
 
 function setEntry(plateTypeArray)
 {
+    var lineCounter=0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
     var plateArray = plateTypeArray[0].split(';');
     var htmlCode = ' ';
+
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '</li>';
+        if(plateArray[i].length > 47)
+        {
+            nbOfTooLongString += 1;
+        }
     }
+
+
+
+    while((lineCounter + nbOfTooLongString) <= nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
+    }
+
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
 
 
 function setMainCourse(plateTypeArray)
 {
+    var lineCounter=0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
+
     htmlCode = ' ';
     plateArray = plateTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '</li>';
+
+        if(plateArray[i].length > 47)
+            nbOfTooLongString++;
+    }
+
+     while((lineCounter + nbOfTooLongString) != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
@@ -73,11 +105,25 @@ function setMainCourse(plateTypeArray)
 
 function setDessert(plateTypeArray)
 {
+    var lineCounter=0;
+    var nbOfLineNeed = 3;
+    var nbOfTooLongString = 0;
+
     htmlCode = ' ';
     plateArray = plateTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        lineCounter++;
+        htmlCode += ' <li> -' + plateArray[i] + '</li>';
+
+        if(plateArray[i].length > 47)
+            nbOfTooLongString++;
+    }
+
+    while((lineCounter + nbOfTooLongString) != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }
@@ -147,8 +193,8 @@ var jsFileArray = ('<?php echo $fileConcat; ?>').split(',');
 $(document).ready(function(){ // s'éxecute au chargement de la page
     hideArrows();
     hideArrows2();
-
     loadFile(jsFileArray[0]);
+
     arrowIndex = 0;
     setArrowsFollowingIndex(arrowIndex);
 });
@@ -174,6 +220,7 @@ $('#arrow_right').click(function(){
 });
 
 $('.menuLink1').click(function(){
+    hideArrows2();
     setTitlesAndTextContainer();
     arrowIndex = 0;
     loadFile(jsFileArray[arrowIndex]); 
