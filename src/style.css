@@ -50,10 +50,12 @@ h1, h2
 
 .vertical_layout
 {
-  height: 150px;
-  /*display: flex;*/
+
+  display: flex;
   flex-direction: column;
+
 }
+
 
 .espaced
 {
@@ -326,6 +328,8 @@ header .main_navigation
 {
   position: relative;
 
+  height: 550px;
+
   border: 1px solid;
   padding: 10px 20px;
   
@@ -375,6 +379,12 @@ header .main_navigation
 #arrow_left2
 {
   left: 0%;
+}
+
+.indexMenu
+{
+  position: relative;
+  margin-top: 15px;
 }
 
 /***********/
