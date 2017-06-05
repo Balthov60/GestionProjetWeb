@@ -111,24 +111,31 @@ function loadMenusFile(file) {
 function setMenu(plateMenuTypeArray)
 {
     var htmlCode = ' ';
-    var lineCounter=0;
-    var nbOfLineNeed = 11;
+    var lineMenuCounter=0;
+    var nbOfTooLongMenuString = 0;
+    var nbOfMenuLineNeed = 11;
     setPageStyle(plateMenuTypeArray, lang);
     
     for(var i = 1; i < plateMenuTypeArray.length; i++)
     {
-        lineCounter++;
-        htmlCode += ' <li>' + plateMenuTypeArray[i] + '</li>';
+        lineMenuCounter++;
+
+        htmlCode += ' <li> -' + plateMenuTypeArray[i] + '</li>';
         
         if(i + 1 != plateMenuTypeArray.length)
             htmlCode += ' <li> - </li>';
+
+        if(plateMenuTypeArray[i].length > 47)
+            nbOfTooLongMenuString++;
     }
 
-    while(lineCounter != nbOfLineNeed)
+    while((lineMenuCounter + nbOfTooLongMenuString) <= nbOfMenuLineNeed)
     {
-        lineCounter++;
-        htmlCode += ' <li></li>';
+        lineMenuCounter++;  
+        htmlCode += '<li>'+'</br></br>'+'</li>';
+
     }
+
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
 
