@@ -172,7 +172,9 @@
           </div>
         </form>
       </div>
-      
+    
+      <div id="alertPanel"></div>
+
       <div class="informations">
         <p>
           <strong><?php echo ADRESSE ?></strong>
@@ -223,9 +225,12 @@
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
-
+    <!-- <script src="js/personnalizeAlertBox.js"></script> -->
     <script src="js/ajaxSubmitForm.js"></script>
     <script src="js/menuRead.js"></script>
+
+
+
 
 
     <!-- PHP -->

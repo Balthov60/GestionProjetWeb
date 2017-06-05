@@ -26,11 +26,20 @@ function loadFileReadMenu(file) {
 
 function setEntry(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
     var plateArray = plateTypeArray[0].split(';');
     var htmlCode = ' ';
     for(var i = 0; i < plateArray.length; i++)
     {
+        lineCounter++;
         htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+    }
+
+    while(lineCounter != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li></li>';
     }
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
@@ -38,11 +47,20 @@ function setEntry(plateTypeArray)
 
 function setMainCourse(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
     htmlCode = ' ';
     plateArray = plateTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
+        lineCounter++;
         htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+    }
+
+    while(lineCounter != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li></li>';
     }
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
@@ -50,11 +68,20 @@ function setMainCourse(plateTypeArray)
 
 function setDessert(plateTypeArray)
 {
+    var lineCounter = 0;
+    var nbOfLineNeed = 3;
     htmlCode = ' ';
     plateArray = plateTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
+        lineCounter++;
         htmlCode += ' <li>- ' + plateArray[i] + ' -</li>';
+    }
+
+     while(lineCounter != nbOfLineNeed)
+    {
+        lineCounter++;
+        htmlCode += ' <li></li>';
     }
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }

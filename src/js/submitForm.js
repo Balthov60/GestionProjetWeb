@@ -1,3 +1,5 @@
+
+
 function getXMLHttpRequest() { 
     var xhr = null;
      
