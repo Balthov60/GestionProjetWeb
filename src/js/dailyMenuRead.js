@@ -45,19 +45,20 @@ function setDailyEntry(plateDailyTypeArray)
         } 
     }
 
+    
     while((lineDailyCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
     }
 
-    document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
+   document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
 
 
 function setDailyMainCourse(plateDailyTypeArray)
 {
-    var lineDailCounter = 0;
+    var lineDailyCounter = 0;
     var nbOfLineNeed = 3;
     var nbOfTooLongString = 0;
 
@@ -68,11 +69,11 @@ function setDailyMainCourse(plateDailyTypeArray)
         lineDailyCounter++;
         htmlCode += ' <li> ' + plateArray[i] + ' </li>';
 
-         if(plateArray[i].length > 41)
+         if(plateArray[i].length > 51)
             nbOfTooLongString++;
     }
 
-    alert(lineDailyCounter);
+
     while((lineDailyCounter+ nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;

@@ -62,12 +62,20 @@ function modifyTitleLanguage(lang)
 {
     if(lang == "en")
     {
-        if($('.menu_text .start_course').text() == 'Nos Poissons')
-            $('.menu_text .start_course').html("Our Fishes");
+        if($('.menu_text .start_course').text() == 'Nos Entrées')
+            $('.menu_text .start_course').html("Our Starters");
 
-        else if($('.menu_text .start_course').text() == "Nos Viandes")        
-            $('.menu_text .start_course').html("Our Meats");
-        
+        else if($('.menu_text .start_course').text() == "Nos Plats")        
+            $('.menu_text .start_course').html("Our Maincourses");
+
+        else if($('.menu_text .start_course').text() == "Nos Fromages")        
+            $('.menu_text .start_course').html("Our Cheeses");
+
+        else if($('.menu_text .start_course').text() == "Nos Vins")        
+            $('.menu_text .start_course').html("Our Wines");
+
+        else if($('.menu_text .start_course').text() == "Nos Desserts")        
+            $('.menu_text .start_course').html("Our Desserts");        
     }
 }
 
