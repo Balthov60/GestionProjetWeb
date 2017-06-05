@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width" />
     
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="basic_style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
 
@@ -96,23 +96,24 @@
             </ul>
 
             <p class="price">(<?php echo PRIX ?> : 35€)</p>
+            <p class="indexMenu">0</p>
           </div>
-        <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
-        <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
-        <img src="images/utilities/arrow_left.png"  id="arrow_left2"  class="arrow" />
-        <img src="images/utilities/arrow_right.png" id="arrow_right2" class="arrow" />
-      </div>
+          <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
+          <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
+          <img src="images/utilities/arrow_left.png"  id="arrow_left2"  class="arrow" />
+          <img src="images/utilities/arrow_right.png" id="arrow_right2" class="arrow" />
+        </div>
 
-      <script>
-        var lang = '<?php echo $lang ?>';
-        var entree = '<?php echo ENTREE ?>';
-        var plat = '<?php echo PLAT ?>';
-        var dessert = '<?php echo DESSERT ?>';
-        var arrowIndex = 0;
-      </script>
+        <script>
+          var lang = '<?php echo $lang ?>';
+          var entree = '<?php echo ENTREE ?>';
+          var plat = '<?php echo PLAT ?>';
+          var dessert = '<?php echo DESSERT ?>';
+          var arrowIndex = 0;
+        </script>
 
 
-    </section>
+      </section>
 
     <div id="contactScrollPoint" class="horizontal_separator scrollPoint"></div>
     

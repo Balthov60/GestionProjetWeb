@@ -50,7 +50,8 @@ h1, h2
 
 .vertical_layout
 {
-  display: flex;
+  height: 150px;
+  /*display: flex;*/
   flex-direction: column;
 }
 

@@ -1,5 +1,5 @@
 
-var dailyMeal = "./menu/dailyMeal.txt";
+var dailyMeal = "./menu/dailyMeal_.txt";
 
 function loadFileReadMenu(file) {
 
@@ -39,10 +39,10 @@ function setDailyEntry(plateDailyTypeArray)
         lineDailyCounter++;
         htmlCode += ' <li> ' + plateArray[i] + ' </li>';
 
-        if(plateArray[i].length > 49) // 49 correspond au nombre de caractère maximum qui peuvent rentrer sur une ligne
+        if(plateArray[i].length > 51) // 49 correspond au nombre de caractère maximum qui peuvent rentrer sur une ligne
         {
             nbOfTooLongString++;
-        }
+        } 
     }
 
     while((lineDailyCounter + nbOfTooLongString) < nbOfLineNeed)
@@ -66,7 +66,7 @@ function setDailyMainCourse(plateDailyTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
         lineDailyCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
+        htmlCode += ' <li> ' + plateArray[i] + ' </li>';
 
          if(plateArray[i].length > 41)
             nbOfTooLongString++;
@@ -93,13 +93,13 @@ function setDessert(plateDailyTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
         lineDailyCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
+        htmlCode += ' <li> ' + plateArray[i] + '</li>';
 
-         if(plateArray[i].length > 41)
+        if(plateArray[i].length > 51)
             nbOfTooLongString++;
     }
 
-     while((lineDailyCounter- nbOfTooLongString) < nbOfLineNeed)
+    while((lineDailyCounter- nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
@@ -111,6 +111,11 @@ function setPrice(plateDailyTypeArray)
 {
     var price = plateDailyTypeArray[3];
     document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
+}
+
+function resetIndexHtml()
+{
+    $('.indexMenu').html('');
 }
 
 /*** Au cas où on a cliqué sur la partie "A la carte" juste avant, 
@@ -128,7 +133,7 @@ function setTitlesAndTextContainer()
 
 
 $('.menuLink2').click(function() {
-
+    resetIndexHtml();
     setTitlesAndTextContainer();
     loadFileReadMenu(dailyMeal);
     $('.arrow').hide();

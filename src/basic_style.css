@@ -50,9 +50,12 @@ h1, h2
 
 .vertical_layout
 {
+
   display: flex;
   flex-direction: column;
+
 }
+
 
 .espaced
 {
@@ -108,6 +111,16 @@ fieldset
 {
   opacity: 0;
 }
+
+/**********/
+/* Cursor */
+/**********/
+
+a, .arrow, li img, .button
+{
+	cursor: pointer;
+}
+
 
 /*********/
 /* Color */
@@ -315,6 +328,8 @@ header .main_navigation
 {
   position: relative;
 
+  height: 550px;
+
   border: 1px solid;
   padding: 10px 20px;
   
@@ -364,6 +379,12 @@ header .main_navigation
 #arrow_left2
 {
   left: 0%;
+}
+
+.indexMenu
+{
+  position: relative;
+  margin-top: 15px;
 }
 
 /***********/

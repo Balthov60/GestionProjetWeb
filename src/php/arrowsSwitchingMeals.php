@@ -59,20 +59,19 @@ function setEntry(plateTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
         lineCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '</li>';
-        if(plateArray[i].length > 49)
+        htmlCode += ' <li> ' + plateArray[i] + '</li>';
+        if(plateArray[i].length > 51)
         {
             nbOfTooLongString += 1;
         }
-
     }
-
 
     while((lineCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
     }
+
 
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
@@ -89,9 +88,9 @@ function setMainCourse(plateTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
         lineCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '</li>';
+        htmlCode += ' <li> ' + plateArray[i] + '</li>';
 
-        if(plateArray[i].length > 49)
+        if(plateArray[i].length > 51)
             nbOfTooLongString++;
     }
 
@@ -115,9 +114,9 @@ function setDessert(plateTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
         lineCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '</li>';
+        htmlCode += ' <li> ' + plateArray[i] + '</li>';
 
-        if(plateArray[i].length > 49)
+        if(plateArray[i].length > 51)
             nbOfTooLongString++;
     }
 
@@ -133,6 +132,11 @@ function setPrice(plateTypeArray)
 {
     var price = plateTypeArray[3];
     document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
+}
+
+function setHtmlMealsIndex(indexMeals, indexMealsMax)
+{
+    $('.indexMenu').html((indexMeals +1 ) + '/' + indexMealsMax);
 }
 
 /**** Arrows Handlers ****/
@@ -199,6 +203,8 @@ $(document).ready(function(){ // s'éxecute au chargement de la page
 
     arrowIndex = 0;
     setArrowsFollowingIndex(arrowIndex);
+    setHtmlMealsIndex(arrowIndex, jsFileArray.length);
+
 });
 
 
@@ -210,6 +216,8 @@ $('#arrow_left').click(function() {
         loadFile(jsFileArray[arrowIndex]); 
     }
     setArrowsFollowingIndex(arrowIndex);
+    setHtmlMealsIndex(arrowIndex, jsFileArray.length);
+
 });
 
 $('#arrow_right').click(function(){
@@ -219,6 +227,8 @@ $('#arrow_right').click(function(){
         loadFile(jsFileArray[arrowIndex]);
     } 
     setArrowsFollowingIndex(arrowIndex);
+    setHtmlMealsIndex(arrowIndex, jsFileArray.length);
+
 });
 
 $('.menuLink1').click(function(){
@@ -226,6 +236,8 @@ $('.menuLink1').click(function(){
     setTitlesAndTextContainer();
     arrowIndex = 0;
     loadFile(jsFileArray[arrowIndex]); 
+    setHtmlMealsIndex(arrowIndex, jsFileArray.length);
+
     $('#arrow_right').show();
 });
 

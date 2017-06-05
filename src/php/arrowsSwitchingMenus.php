@@ -76,6 +76,11 @@ function setTitle(plateMenuTypeArray)
     $('.menu_text .start_course').html(plateMenuTypeArray[0]);
 }
 
+function setCSSOverflow()
+{
+    $('.menu_text').css({'overflow':'auto'})
+}
+
 
 function setPageStyle(plateMenuTypeArray, lang)
 {
@@ -83,7 +88,15 @@ function setPageStyle(plateMenuTypeArray, lang)
     hideOtherTextContainer();
     setTitle(plateMenuTypeArray);
     modifyTitleLanguage(lang);
+    setCSSOverflow();
 }
+
+
+function setHtmlMenusIndex(indexMenu, indexMenuMax)
+{
+    $('.indexMenu').html((indexMenu +1 ) + '/' + indexMenuMax);
+}
+
 
 
 /*** Lecture fichier et affichage des menus ****/
@@ -114,7 +127,7 @@ function setMenu(plateMenuTypeArray)
     var htmlCode = ' ';
     var lineMenuCounter=0;
     var nbOfTooLongMenuString = 0;
-    var nbOfMenuLineNeed = 10;
+    var nbOfMenuLineNeed = 9;
     setPageStyle(plateMenuTypeArray, lang);
     
     for(var i = 1; i < plateMenuTypeArray.length; i++)
@@ -192,6 +205,7 @@ $('#arrow_left2').click(function() {
         arrowMenusIndex--;
         loadMenusFile(jsMenusFileArray[arrowMenusIndex]);
     }
+    setHtmlMenusIndex(arrowMenusIndex, jsMenusFileArray.length);
     setArrowsMenusFollowingIndex(arrowMenusIndex);
 });
 
@@ -201,12 +215,14 @@ $('#arrow_right2').click(function(){
         arrowMenusIndex++;
         loadMenusFile(jsMenusFileArray[arrowMenusIndex]);
     } 
+    setHtmlMenusIndex(arrowMenusIndex, jsMenusFileArray.length);
     setArrowsMenusFollowingIndex(arrowMenusIndex);
 });
 
 $('.menuLink3').click(function(){
     arrowMenusIndex = 0;
     loadMenusFile(jsMenusFileArray[arrowMenusIndex]); 
+    setHtmlMenusIndex(arrowMenusIndex, jsMenusFileArray.length);
     hideArrows2();
     hideArrows();
     $('#arrow_right2').show();
