@@ -9,14 +9,15 @@ function loadFileReadMenu(file) {
     xhr.open('GET', file);
     xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
 
+
     xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
 
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
-        	var plateTypeArray = xhr.responseText.split('/'); /* Stock tout le fichier dans la variable (tableau)*/
-            setEntry(plateTypeArray);
-            setMainCourse(plateTypeArray);
-            setDessert(plateTypeArray);
-            setPrice(plateTypeArray);
+        if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) { // Si le fichier est chargé sans erreur
+        	var plateDailyTypeArray = xhr.responseText.split('/'); /* Stock tout le fichier dans la variable (tableau)*/
+            setDailyEntry(plateDailyTypeArray);
+            setDailyMainCourse(plateDailyTypeArray);
+            setDessert(plateDailyTypeArray);
+            setPrice(plateDailyTypeArray);
         }
 
     });
@@ -24,85 +25,91 @@ function loadFileReadMenu(file) {
     xhr.send(null); // La requête est prête, on envoie tout !
 }
 
-function setEntry(plateTypeArray)
+function setDailyEntry(plateDailyTypeArray)
 {
-    var lineCounter = 0;
+    var lineDailyCounter = 0;
     var nbOfLineNeed = 3;
     var nbOfTooLongString = 0;
-    var plateArray = plateTypeArray[0].split(';');
+    var plateArray = plateDailyTypeArray[0].split(';');
+
     var htmlCode = ' ';
     for(var i = 0; i < plateArray.length; i++)
     {
-        lineCounter++;
-        htmlCode += ' <li> -' + plateArray[i] + '- </li>';
 
-         if(plateArray[i].length > 41)
+        lineDailyCounter++;
+        htmlCode += ' <li> ' + plateArray[i] + ' </li>';
+
+        if(plateArray[i].length > 49) // 49 correspond au nombre de caractère maximum qui peuvent rentrer sur une ligne
+        {
             nbOfTooLongString++;
+        }
     }
 
-    while((lineCounter - nbOfTooLongString) != nbOfLineNeed)
+    while((lineDailyCounter + nbOfTooLongString) < nbOfLineNeed)
     {
-        lineCounter++;
+        lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
     }
+
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
 
 
-function setMainCourse(plateTypeArray)
+function setDailyMainCourse(plateDailyTypeArray)
 {
-    var lineCounter = 0;
+    var lineDailCounter = 0;
     var nbOfLineNeed = 3;
     var nbOfTooLongString = 0;
 
     htmlCode = ' ';
-    plateArray = plateTypeArray[1].split(';');
+    plateArray = plateDailyTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        lineCounter++;
+        lineDailyCounter++;
         htmlCode += ' <li> -' + plateArray[i] + '- </li>';
 
          if(plateArray[i].length > 41)
             nbOfTooLongString++;
     }
 
-    while((lineCounter- nbOfTooLongString) != nbOfLineNeed)
+    alert(lineDailyCounter);
+    while((lineDailyCounter+ nbOfTooLongString) < nbOfLineNeed)
     {
-        lineCounter++;
+        lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
 
 
-function setDessert(plateTypeArray)
+function setDessert(plateDailyTypeArray)
 {
-    var lineCounter = 0;
+    var lineDailyCounter = 0;
     var nbOfLineNeed = 3;
     var nbOfTooLongString = 0;
 
     htmlCode = ' ';
-    plateArray = plateTypeArray[2].split(';');
+    plateArray = plateDailyTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        lineCounter++;
+        lineDailyCounter++;
         htmlCode += ' <li> -' + plateArray[i] + '- </li>';
 
          if(plateArray[i].length > 41)
             nbOfTooLongString++;
     }
 
-     while((lineCounter- nbOfTooLongString) <= nbOfLineNeed)
+     while((lineDailyCounter- nbOfTooLongString) < nbOfLineNeed)
     {
-        lineCounter++;
+        lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
     }
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }
 
-function setPrice(plateTypeArray)
+function setPrice(plateDailyTypeArray)
 {
-    var price = plateTypeArray[3];
+    var price = plateDailyTypeArray[3];
     document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
 }
 
@@ -121,6 +128,7 @@ function setTitlesAndTextContainer()
 
 
 $('.menuLink2').click(function() {
+
     setTitlesAndTextContainer();
     loadFileReadMenu(dailyMeal);
     $('.arrow').hide();

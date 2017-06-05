@@ -26,6 +26,7 @@
 /**** Menus Functions ****/
 
 function loadFile(file) {
+
     var chemin = 'menu/main_Meals/';
     file = chemin + file;
     var xhr = new XMLHttpRequest();
@@ -59,15 +60,15 @@ function setEntry(plateTypeArray)
     {
         lineCounter++;
         htmlCode += ' <li> -' + plateArray[i] + '</li>';
-        if(plateArray[i].length > 47)
+        if(plateArray[i].length > 49)
         {
             nbOfTooLongString += 1;
         }
+
     }
 
 
-
-    while((lineCounter + nbOfTooLongString) <= nbOfLineNeed)
+    while((lineCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
@@ -90,11 +91,11 @@ function setMainCourse(plateTypeArray)
         lineCounter++;
         htmlCode += ' <li> -' + plateArray[i] + '</li>';
 
-        if(plateArray[i].length > 47)
+        if(plateArray[i].length > 49)
             nbOfTooLongString++;
     }
 
-     while((lineCounter + nbOfTooLongString) != nbOfLineNeed)
+     while((lineCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
@@ -116,11 +117,11 @@ function setDessert(plateTypeArray)
         lineCounter++;
         htmlCode += ' <li> -' + plateArray[i] + '</li>';
 
-        if(plateArray[i].length > 47)
+        if(plateArray[i].length > 49)
             nbOfTooLongString++;
     }
 
-    while((lineCounter + nbOfTooLongString) != nbOfLineNeed)
+    while((lineCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
@@ -190,6 +191,7 @@ function setTitlesAndTextContainer()
 var jsFileArray = ('<?php echo $fileConcat; ?>').split(',');
 
 
+
 $(document).ready(function(){ // s'éxecute au chargement de la page
     hideArrows();
     hideArrows2();
@@ -226,6 +228,8 @@ $('.menuLink1').click(function(){
     loadFile(jsFileArray[arrowIndex]); 
     $('#arrow_right').show();
 });
+
+
 
 </script>
 

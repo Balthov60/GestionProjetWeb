@@ -42,6 +42,7 @@
 
 <script type="text/javascript"> 
 
+
 /***** Mise en Page ****/
 
 function hideOtherTitle()
@@ -113,27 +114,26 @@ function setMenu(plateMenuTypeArray)
     var htmlCode = ' ';
     var lineMenuCounter=0;
     var nbOfTooLongMenuString = 0;
-    var nbOfMenuLineNeed = 11;
+    var nbOfMenuLineNeed = 10;
     setPageStyle(plateMenuTypeArray, lang);
     
     for(var i = 1; i < plateMenuTypeArray.length; i++)
     {
         lineMenuCounter++;
 
-        htmlCode += ' <li> -' + plateMenuTypeArray[i] + '</li>';
+        htmlCode += ' <li> ' + plateMenuTypeArray[i] + '</li>';
         
         if(i + 1 != plateMenuTypeArray.length)
             htmlCode += ' <li> - </li>';
 
-        if(plateMenuTypeArray[i].length > 47)
+        if(plateMenuTypeArray[i].length > 49)
             nbOfTooLongMenuString++;
     }
-
-    while((lineMenuCounter + nbOfTooLongMenuString) <= nbOfMenuLineNeed)
+    var nbOfLine = lineMenuCounter + nbOfTooLongMenuString
+    while(nbOfLine < nbOfMenuLineNeed)
     {
-        lineMenuCounter++;  
         htmlCode += '<li>'+'</br></br>'+'</li>';
-
+        nbOfLine++;  
     }
 
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
@@ -211,6 +211,8 @@ $('.menuLink3').click(function(){
     hideArrows();
     $('#arrow_right2').show();
 });
+
+
 
 </script>
 

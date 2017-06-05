@@ -19,6 +19,7 @@
 	define('ENTREE', '- Starter -');
 	define('PLAT', '- Main Course -');
 	define('DESSERT','- Desserts -');
+	define('LISTE_MENUS', 'Menus List');
 	define('PRIX', 'Price');
 	define('ADRESSE', 'Adress');
 	define('HORAIRE', 'Hours');

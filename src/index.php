@@ -82,15 +82,17 @@
           <div class="text_padding">
             <h2 class="start_course"><?php echo ENTREE ?></h2>
             <ul class="vertical_layout menuDisplayer" id="startCourse_Displayer">
-              <li>Erreur de Lecture </li>
+              <li>Chargement..</li>
             </ul>
 
             <h2 class="main_course"><?php echo PLAT ?></h2>
             <ul class="vertical_layout menuDisplayer" id="mainCourse_Displayer">  
+             <li>Chargement..</li>
             </ul>
 
             <h2 class="dessert"><?php echo DESSERT ?></h2>
             <ul class="vertical_layout menuDisplayer" id="dessert_Displayer">  
+             <li>Chargement..</li>
             </ul>
 
             <p class="price">(<?php echo PRIX ?> : 35€)</p>
@@ -227,7 +229,7 @@
     <script src="js/menuNavigation.js"></script>
     <!-- <script src="js/personnalizeAlertBox.js"></script> -->
     <script src="js/ajaxSubmitForm.js"></script>
-    <script src="js/menuRead.js"></script>
+    <script src="js/dailyMenuRead.js"></script> 
 
 
 

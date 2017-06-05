@@ -18,7 +18,8 @@
 	define('CARTE', 'CARTE');
 	define('ENTREE', '- Entrée -');
 	define('PLAT', '- Plat -');
-	define('DESSERT','- Desserts -');						
+	define('DESSERT','- Desserts -');
+	define('LISTE_MENUS', 'Liste des Menus');					
 	define('PRIX', 'Prix');
 	define('ADRESSE', 'Adresse');
 	define('HORAIRE', 'Les horaires');
