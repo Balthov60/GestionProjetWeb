@@ -329,9 +329,7 @@ header .main_navigation
   position: relative;
 
   height: 550px;
-  width: 10px;
 
-  background-color: blue;
 
   border: 1px solid;
   padding: 10px 20px;
@@ -341,8 +339,7 @@ header .main_navigation
 .menu_text ul
 {
   list-style-type: none;
-  padding: 0px;
-  
+  padding: 0px;  
 }
 
 .menu_text h2, menu_text ul
@@ -386,8 +383,9 @@ header .main_navigation
 
 .indexMenu
 {
-  position: relative;
-  margin-bottom:  15px;
+  position: absolute;
+  right: 10%;
+  top: 95%;
 }
 
 /***********/
