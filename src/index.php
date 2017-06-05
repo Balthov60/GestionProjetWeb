@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <!-- Lang Handling -->
-    <?php include('php/lang_handling.php'); ?>
+    <?php include('php/langHandling.php'); ?>
 
     <title>Les Adrets</title>
     <link rel="shortcut icon" href="images/logos/logo.png" type="image/x-icon"/>
