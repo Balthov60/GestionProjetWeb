@@ -95,22 +95,22 @@
 
             <p class="price">(<?php echo PRIX ?> : 35€)</p>
           </div>
-          <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
-          <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
-          <img src="images/utilities/arrow_left.png"  id="arrow_left2"  class="arrow" />
-          <img src="images/utilities/arrow_right.png" id="arrow_right2" class="arrow" />
-        </div>
+        <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
+        <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
+        <img src="images/utilities/arrow_left.png"  id="arrow_left2"  class="arrow" />
+        <img src="images/utilities/arrow_right.png" id="arrow_right2" class="arrow" />
+      </div>
 
-        <script>
-          var lang = '<?php echo $lang ?>';
-          var entree = '<?php echo ENTREE ?>';
-          var plat = '<?php echo PLAT ?>';
-          var dessert = '<?php echo DESSERT ?>';
-          var arrowIndex = 0;
-        </script>
+      <script>
+        var lang = '<?php echo $lang ?>';
+        var entree = '<?php echo ENTREE ?>';
+        var plat = '<?php echo PLAT ?>';
+        var dessert = '<?php echo DESSERT ?>';
+        var arrowIndex = 0;
+      </script>
 
 
-      </section>
+    </section>
 
     <div id="contactScrollPoint" class="horizontal_separator scrollPoint"></div>
     
@@ -167,7 +167,7 @@
             
             <div class="validation">
               <p><?php echo RESERVATION_PLUS_5PERSONNES ?></p>
-              <input type="button" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+              <input type="button" class="button" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
             </div>
           </div>
         </form>
