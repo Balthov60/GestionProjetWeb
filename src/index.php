@@ -223,8 +223,7 @@
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <script src="js/ajaxSubmitForm.js"></script>
     <script src="js/menuRead.js"></script>
 
@@ -234,12 +233,12 @@
     <?php include './php/arrowsSwitchingMenus.php'; ?>
 
 
-=======
+
     <script src="js/submitForm.js"></script>
->>>>>>> 52581815652e0c316508e139a373f60bfc6acdd8
-=======
+
     <script src="js/submitForm.js"></script>
->>>>>>> 52581815652e0c316508e139a373f60bfc6acdd8
+
+    <script src="js/submitForm.js"></script>
 
   </body>
 </html>
