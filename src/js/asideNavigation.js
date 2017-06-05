@@ -42,10 +42,31 @@ $(document).ready(function()
 		{
 		var linkHref = $(this).attr('href');
 
-		var menu = $('#menu');
-		alert(menu);
+		var menuHeight = document.getElementById('menu').offsetHeight;
+		var height = 0;
 
-		var height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
+		if (linkHref == "#scrollMenu") {
+			if (document.getElementById('menu').offsetHeight < ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight))
+				height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
+			else
+				height = $('#menuScrollPoint').offset().top;
+		}
+		else if (linkHref == "#scrollHistory") {
+			if (document.getElementById("restaurant_history").offsetHeight * 2 < ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight))
+				height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
+			else
+				height = $('#restaurant_history').offset().top - 10;
+		}
+		else if (linkHref == "#scrollContact") {
+			if (document.getElementById("contact").offsetHeight * 2 < ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight))
+				height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
+			else
+				height = $('#contactScrollPoint').offset().top - 10;
+		}
+		else {
+			height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
+		}
+
 		if (height < 0)
 			height = 0;
 
