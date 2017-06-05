@@ -336,6 +336,11 @@ header .main_navigation
   
   text-align: center;
 }
+
+.menu_text ul li
+{
+  margin: auto;
+}
 .menu_text ul
 {
   list-style-type: none;
@@ -384,7 +389,7 @@ header .main_navigation
 .indexMenu
 {
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 95%;
 }
 

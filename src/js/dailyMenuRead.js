@@ -36,21 +36,21 @@ function setDailyEntry(plateDailyTypeArray)
     for(var i = 0; i < plateArray.length; i++)
     {
 
-        lineDailyCounter++;
+        //lineDailyCounter++;
         htmlCode += ' <li> ' + plateArray[i] + ' </li>';
 
-        if(plateArray[i].length > 51) // 49 correspond au nombre de caractère maximum qui peuvent rentrer sur une ligne
+        /*if(plateArray[i].length > 51) // 49 correspond au nombre de caractère maximum qui peuvent rentrer sur une ligne
         {
             nbOfTooLongString++;
-        } 
+        } */
     }
 
     
-    while((lineDailyCounter + nbOfTooLongString) < nbOfLineNeed)
+    /*while((lineDailyCounter + nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
-    }
+    }*/
 
    document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
@@ -66,19 +66,19 @@ function setDailyMainCourse(plateDailyTypeArray)
     plateArray = plateDailyTypeArray[1].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        lineDailyCounter++;
+        //lineDailyCounter++;
         htmlCode += ' <li> ' + plateArray[i] + ' </li>';
 
-         if(plateArray[i].length > 51)
-            nbOfTooLongString++;
+        /* if(plateArray[i].length > 51)
+            nbOfTooLongString++;*/
     }
 
 
-    while((lineDailyCounter+ nbOfTooLongString) < nbOfLineNeed)
+    /*while((lineDailyCounter+ nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
-    }
+    }*/
     document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
 }
 
@@ -93,18 +93,18 @@ function setDessert(plateDailyTypeArray)
     plateArray = plateDailyTypeArray[2].split(';');
     for(var i = 0; i < plateArray.length; i++)
     {
-        lineDailyCounter++;
+       // lineDailyCounter++;
         htmlCode += ' <li> ' + plateArray[i] + '</li>';
 
-        if(plateArray[i].length > 51)
-            nbOfTooLongString++;
+       /* if(plateArray[i].length > 51)
+            nbOfTooLongString++; */
     }
 
-    while((lineDailyCounter- nbOfTooLongString) < nbOfLineNeed)
+    /*while((lineDailyCounter- nbOfTooLongString) < nbOfLineNeed)
     {
         lineDailyCounter++;
         htmlCode += ' <li>'+'</br>'+'</li>';
-    }
+    }*/
     document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
 }
 

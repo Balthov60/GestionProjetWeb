@@ -1,6 +1,4 @@
 ﻿Nos Vins/
-Crozes Hermitage (Rouge, 12cl), 8€ 
-/
 Côtes du rhône (Rouge, 12cl), 4€
 /
 Viognier (Blanc, 12cl), 4€
@@ -9,7 +7,9 @@ Côte de Provence (Rosé, 12cl), 4€
 /
 "L'Envolée des Tourterelles" (Blanc Moelleux, 12cl), 5€
 /
-Crozes Hermitage (Rouge - Vallée du Rhône, 37.5cl), 18€
+Crozes Hermitage (Rouge, 12cl), 8€ 
+/
+Crozes Hermitage (Rouge-Vallée du Rhône, 37.5cl), 18€
 /
 Listel Grain de Gris - Tête de cuvée (Rosé, 75cl), 18€
 /
