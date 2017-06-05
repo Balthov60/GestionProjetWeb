@@ -4,13 +4,15 @@
 	define('MENUS', 'MENUS');
 	define('RESERVATION_MAJ', 'BOOKING');
 	define('LE_RESTAURANT', 'The Restaurant');
-	define('LE_RESTAURANT_TEXTE', 'Lorem ipsum dolor sit amet, te scripta nostrum ius, est alii magna cu. Invidunt consulatu ne cum. Te qui prima 								   adolescens, inermis nonumes no vel. Sea et enim probatus, cum et veri quas iusto, offendit delectus vulputate no mel. 							Phaedrum efficiantur definitionem ea eum, te mea mundi quodsi.
-            				 	   Eu etiam verear fuisset duo, accusam scriptorem nec an. Mel cibo liber euripidis cu, nostrud minimum ut eam, mei timeam tibique interpretaris in. Qui nullam libris quaeque ne. Pri saepe prompta aliquam in.');
+
+	define('LE_RESTAURANT_TEXTE', "Located in an old typical building of the 'Vieux Lyon', the restaurant 'Les Adrets' transform the traditional cooking of the 'Bouchons lyonnais' providing modernity and creativity. The restaurant has a warm and cheerful decor and includes a beautiful courtyard that overlooks the open kitchen. the restaurant is a perfect example of the French Touch with old wooden furniture, white tablecloths... We eat under a French ceiling, in a friendly atmosphere.");
+
 	define('RESTAURANT_ADRETS', 'Restaurant Les Adrets');
 	define('LE_CHEF_HEAD', 'THE HEAD CHEF');
 	define('LE_CHEF', 'The Head Chef');
-	define('LE_CHEF_TEXTE', 'Lorem ipsum dolor sit amet, te scripta nostrum ius, est alii magna cu. Invidunt consulatu ne cum. Te qui prima adolescens, 					 inermis nonumes no vel. Sea et enim probatus, cum et veri quas iusto, offendit delectus vulputate no mel. Phaedrum 							 efficiantur definitionem ea eum, te mea mundi quodsi.
-            				 Eu etiam verear fuisset duo, accusam scriptorem nec an. Mel cibo liber euripidis cu, nostrud minimum ut eam, mei timeam tibique interpretaris in. Qui nullam libris quaeque ne. Pri saepe prompta aliquam in.');
+
+	define('LE_CHEF_TEXTE', "The chief, Jean-Luc Wesolowski began cooking as an apprentice in 1971. He acquire 'Les Adrets' in 1981 and create is own restaurant. Proud of its origins, it has managed to keep the local side of his restaurant and to afford it a touch of modernity. This French Gastronomy Lover offers us a lot of choice in a typical Lyon's menu as well as a large wine selection making the restaurant 'Les Adrets' one of the last  authentic 'Bouchon Lyonnais' in the 'Vieux Lyon'.");
+
 	define('MENU', 'MEALS');
 	define('AUJOURDHUI', 'TODAY');
 	define('CARTE', 'MENU');
