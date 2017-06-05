@@ -1,6 +1,5 @@
 
 var dailyMeal = "./menu/dailyMeal.txt";
-var menu = "./menu/menu.txt";
 
 function loadFileReadMenu(file) {
 
@@ -66,17 +65,24 @@ function setPrice(plateTypeArray)
     document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
 }
 
+/*** Au cas où on a cliqué sur la partie "A la carte" juste avant, 
+ce qui avait donc supprimé les titres et conteneur de texte ***/
+function setTitlesAndTextContainer() 
+{
+    /*Titles*/
+    $('.menu_text .main_course').show();
+    $('.menu_text .dessert').show();
 
-$(document).ready(function(){
+    /*Text Container*/
+    $('#mainCourse_Displayer').show();
+    $('#dessert_Displayer').show();
+}
 
-    $('.menuLink2').click(function() {
-        loadFileReadMenu(dailyMeal);
-        $('.arrow').hide();
-    });
 
-    $('.menuLink3').click(function(){
-        loadFileReadMenu(menu);
-        $('.arrow').hide();
-    });
+$('.menuLink2').click(function() {
+    setTitlesAndTextContainer();
+    loadFileReadMenu(dailyMeal);
+    $('.arrow').hide();
 });
+
 

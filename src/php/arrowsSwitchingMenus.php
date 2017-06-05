@@ -1,34 +1,94 @@
 <?php
     $index = 0;
     $fileConcat = '' ;
-    $dir = "menu/main_Meals/";
-    $dh  = opendir($dir);
-    while (false !== ($filename = readdir($dh))) {
-        $filesArray[] = $filename;
+    $dir = "menu/menusTypes/";
+    
+    function listFileIn($dir, $fileConcat)
+    {
+        $dh  = opendir($dir);
+    
+        while (false !== ($menuFilename = readdir($dh))) { 
+            $menuFilesArray[] = $menuFilename;
+        }
 
+        rsort($menuFilesArray); 
+
+        /***On crée une chaine concaténée de tous les noms de fichiers 
+        pour pouvoir les utiliser dans le JS après***/
+
+        /*** sizeof($menuFilesArray)-2 car dans le tableau il y a les fichiers mais aussi ".." et "..." (présent dans le dossier) 
+        donc il faut les enlever ***/
+
+        for($i = 0; $i<sizeof($menuFilesArray)-2; $i++) 
+        {
+            if($i == sizeof($menuFilesArray)-3)
+                $fileConcat .= $menuFilesArray[$i];
+            
+            else
+                $fileConcat .= $menuFilesArray[$i] . ',';
+        }  
+
+        return $fileConcat;
     }
 
-    rsort($filesArray);
-
-    for($i = 0; $i<sizeof($filesArray)-2; $i++)
+    function getLanguage()
     {
-        if($i == sizeof($filesArray)-3)
-            $fileConcat .= $filesArray[$i];
-        
-        else
-            $fileConcat .= $filesArray[$i] . ',';
-    }    
+        if(isset($_GET['lang']))
+            return $_GET['lang'];
+    }  
 ?>
+
+
 
 <script type="text/javascript"> 
 
-document.addEventListener("DOMContentLoaded", function() {
-  loadFile(jsFileArray[0]);
-  arrowIndex = 0;
-});
+/***** Mise en Page ****/
 
-function loadFile(file) {
-    var chemin = 'menu/main_Meals/';
+function hideOtherTitle()
+{
+    $('.menu_text .main_course').hide();
+    $('.menu_text .dessert').hide();
+}
+
+function hideOtherTextContainer()
+{
+    $('#mainCourse_Displayer').hide();
+    $('#dessert_Displayer').hide();
+    $('.price').hide();
+}
+
+function modifyTitleLanguage(lang)
+{
+    if(lang == "en")
+    {
+        if($('.menu_text .start_course').text() == 'Nos Poissons')
+            $('.menu_text .start_course').html("Our Fishes");
+
+        else if($('.menu_text .start_course').text() == "Nos Viandes")        
+            $('.menu_text .start_course').html("Our Meats");
+        
+    }
+}
+
+function setTitle(plateTypeArray)
+{
+    $('.menu_text .start_course').html(plateTypeArray[0]);
+}
+
+
+function setPageStyle(plateTypeArray, lang)
+{
+    hideOtherTitle();
+    hideOtherTextContainer();
+    setTitle(plateTypeArray);
+    modifyTitleLanguage(lang);
+}
+
+
+/*** Lecture fichier et affichage des menus ****/
+
+function loadMenusFile(file) {
+    var chemin = 'menu/menusTypes/';
     file = chemin + file;
     var xhr = new XMLHttpRequest();
     // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -39,10 +99,7 @@ function loadFile(file) {
 
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
             var plateTypeArray = xhr.responseText.split('/'); /* Stock tout le fichier dans la variable (tableau)*/
-            setEntry(plateTypeArray);
-            setMainCourse(plateTypeArray);
-            setDessert(plateTypeArray);
-            setPrice(plateTypeArray);
+            setMenu(plateTypeArray);
         }
 
     });
@@ -50,47 +107,31 @@ function loadFile(file) {
     xhr.send(null); // La requête est prête, on envoie tout !
 }
 
-function setEntry(plateTypeArray)
+
+function setMenu(plateTypeArray)
 {
-    var plateArray = plateTypeArray[0].split(';');
     var htmlCode = ' ';
-    for(var i = 0; i < plateArray.length; i++)
+    setPageStyle(plateTypeArray, lang);
+    
+    for(var i = 1; i < plateTypeArray.length; i++)
     {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
+        htmlCode += ' <li>' + plateTypeArray[i] + '</li>';
+        
+        if(i + 1 != plateTypeArray.length)
+            htmlCode += ' <li> - </li>';
     }
     document.getElementsByClassName('menuDisplayer')[0].innerHTML = htmlCode;
 }
 
 
-function setMainCourse(plateTypeArray)
+
+/**** Arrows Handlers ****/
+
+function hideArrows2()
 {
-    htmlCode = ' ';
-    plateArray = plateTypeArray[1].split(';');
-    for(var i = 0; i < plateArray.length; i++)
-    {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
-    }
-    document.getElementsByClassName('menuDisplayer')[1].innerHTML = htmlCode;
+    $('#arrow_right2').hide(); 
+    $('#arrow_left2').hide();
 }
-
-
-function setDessert(plateTypeArray)
-{
-    htmlCode = ' ';
-    plateArray = plateTypeArray[2].split(';');
-    for(var i = 0; i < plateArray.length; i++)
-    {
-        htmlCode += ' <li>' + plateArray[i] + '</li>';
-    }
-    document.getElementsByClassName('menuDisplayer')[2].innerHTML = htmlCode;
-}
-
-function setPrice(plateTypeArray)
-{
-    var price = plateTypeArray[3];
-    document.getElementsByClassName('price')[0].innerHTML = '(Prix : ' + price + '€)';
-}
-
 
 function hideArrows()
 {
@@ -99,61 +140,62 @@ function hideArrows()
 }
 
 
-function setArrowsFollowingIndex(arrowIndex)
+function setArrowsMenusFollowingIndex(arrowMenusIndex)
 {
-    if(arrowIndex + 1 == jsFileArray.length)
+    if(arrowMenusIndex + 1 == jsMenusFileArray.length)
     {
-        hideArrows();
-        $('#arrow_left').show();
+        hideArrows2();
+        $('#arrow_left2').show();
     }
 
-    else if(arrowIndex == 0 )
+    else if(arrowMenusIndex == 0 )
     {
-        hideArrows();
-        $('#arrow_right').show();  
+        hideArrows2();
+        $('#arrow_right2').show();  
     }
 
     else 
     {
-        $('#arrow_left').show();
-        $('#arrow_right').show(); 
+        $('#arrow_left2').show();
+        $('#arrow_right2').show(); 
     }
         
 }
 
 
+/***** Click Handlers ******/
 
-var jsFileArray = ('<?php echo $fileConcat; ?>').split(',');
+var jsMenusFileArray = ('<?php echo listFileIn($dir, $fileConcat); ?>').split(',');
+var lang = '<?php echo getLanguage(); ?>';
 
-$(document).ready(function(){
 
-    setArrowsFollowingIndex(arrowIndex);
-
-    $('#arrow_left').click(function() {
-        
-        if(arrowIndex > 0)
-        {
-            arrowIndex--;
-            loadFile(jsFileArray[arrowIndex]); 
-        }
-        setArrowsFollowingIndex(arrowIndex);
-    });
-
-    $('#arrow_right').click(function(){
-        if(arrowIndex + 1 < (jsFileArray.length))
-        {
-            arrowIndex++;
-            loadFile(jsFileArray[arrowIndex]);
-        } 
-        setArrowsFollowingIndex(arrowIndex);
-    });
-
-    $('.menuLink1').click(function(){
-        arrowIndex = 0;
-        loadFile(jsFileArray[arrowIndex]); 
-        $('#arrow_right').show();
-    });
+$('#arrow_left2').click(function() {
+    
+    if(arrowMenusIndex > 0)
+    {
+        arrowMenusIndex--;
+        loadMenusFile(jsMenusFileArray[arrowMenusIndex]);
+    }
+    setArrowsMenusFollowingIndex(arrowMenusIndex);
 });
+
+$('#arrow_right2').click(function(){
+    if(arrowMenusIndex + 1 < (jsMenusFileArray.length))
+    {
+        arrowMenusIndex++;
+        loadMenusFile(jsMenusFileArray[arrowMenusIndex]);
+    } 
+    setArrowsMenusFollowingIndex(arrowMenusIndex);
+});
+
+$('.menuLink3').click(function(){
+    arrowMenusIndex = 0;
+    loadMenusFile(jsMenusFileArray[arrowMenusIndex]); 
+    hideArrows2();
+    hideArrows();
+    $('#arrow_right2').show();
+});
+
 </script>
 
 

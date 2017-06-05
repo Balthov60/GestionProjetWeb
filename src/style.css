@@ -348,10 +348,20 @@ header .main_navigation
 
 #arrow_right
 {
-  right: 0px;
+  right: 0%;
 }
 
 #arrow_left
+{
+  left: 0%;
+}
+
+#arrow_right2
+{
+  right: 0px;
+}
+
+#arrow_left2
 {
   left: 0%;
 }

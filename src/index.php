@@ -17,11 +17,10 @@
     <meta name="viewport" content="width=device-width" />
     
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="basic_style.css" />
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
 
-    
 
   </head>
 
@@ -83,22 +82,24 @@
         <div class="menu_text vertical_layout">
           <div class="text_padding">
             <h2 class="start_course"><?php echo ENTREE ?></h2>
-            <ul class="vertical_layout menuDisplayer">
+            <ul class="vertical_layout menuDisplayer" id="startCourse_Displayer">
               <li>Erreur de Lecture </li>
             </ul>
 
             <h2 class="main_course"><?php echo PLAT ?></h2>
-            <ul class="vertical_layout menuDisplayer">  
+            <ul class="vertical_layout menuDisplayer" id="mainCourse_Displayer">  
             </ul>
 
             <h2 class="dessert"><?php echo DESSERT ?></h2>
-            <ul class="vertical_layout menuDisplayer">  
+            <ul class="vertical_layout menuDisplayer" id="dessert_Displayer">  
             </ul>
 
             <p class="price">(<?php echo PRIX ?> : 35€)</p>
           </div>
           <img src="images/utilities/arrow_left.png"  id="arrow_left"  class="arrow" />
           <img src="images/utilities/arrow_right.png" id="arrow_right" class="arrow" />
+          <img src="images/utilities/arrow_left.png"  id="arrow_left2"  class="arrow" />
+          <img src="images/utilities/arrow_right.png" id="arrow_right2" class="arrow" />
         </div>
 
         <script>
@@ -222,11 +223,13 @@
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
     <script src="js/ajaxSubmitForm.js"></script>
-    <script src="./js/menuRead.js"></script>
+    <script src="js/menuRead.js"></script>
 
 
     <!-- PHP -->
+    <?php include './php/arrowsSwitchingMeals.php'; ?>
     <?php include './php/arrowsSwitchingMenus.php'; ?>
+
 
 
   </body>
