@@ -1,33 +1,31 @@
 // Image Status
 var index = 1;
 var opacity = 0;
-var pictureQty = 3;	
+var pictureQty = 3;
 
 // Images
 var images = document.getElementsByClassName("fade");
 var background = document.getElementsByClassName("slideshow");
 var path = ["images/historic/chief_", "images/historic/restaurant_"];
-var i;
+var imageSwitcher = 0;
 
-// Smooth Param
+// slideshow Param
 var smoothDelay = 25;
 var smoothRate = 0.05;
+var slideshowFrequency = 3750;
 
 // Init Background
-index++
-for (i = 0; i < background.length; i++) {
-	background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
+for (var i = 0; i < background.length; i++) {
+	background[i].style.backgroundImage = 'url(' + path[i] + 1 + '.jpg)';
 }
 
 // Circle call methods. TODO: Find Cleaner Way ?
-setTimeout(smooth, 5000);
+setTimeout(smooth, slideshowFrequency);
 
 function smooth() {
 	if (opacity < 1) {
 		opacity += smoothRate;
-		for (i = 0; i < images.length; i++) {
-		    images[i].style.opacity = opacity;
-		}
+		images[imageSwitcher].style.opacity = opacity;
 		setTimeout(smooth, smoothDelay);
 	}
 	else {
@@ -36,27 +34,25 @@ function smooth() {
 }
 
 function changePicture() {
-	if (index > pictureQty)
+	if (index % pictureQty + 1> pictureQty)
 		index = 0;
 
 	index++;
-	for (i = 0; i < background.length; i++) {
-		background[i].style.backgroundImage = 'url(' + path[i] + index + '.jpg)';
-	}
+	background[imageSwitcher].style.backgroundImage = 'url(' + path[imageSwitcher] + (index % pictureQty + 1)+ '.jpg)';
 
-	index++;
 	setTimeout(invertSmooth, smoothDelay);
 }
 
 function invertSmooth() {
 	if (opacity > 0) {
 		opacity -= smoothRate;
-		for (i = 0; i < images.length; i++) {
-		    images[i].style.opacity = opacity;
-		}
+		images[imageSwitcher].style.opacity = opacity;
 		setTimeout(invertSmooth, smoothDelay);
 	}
 	else {
-		setTimeout(smooth, 5000);
+		imageSwitcher++;
+		if (imageSwitcher >= images.length)
+			imageSwitcher = 0;
+		setTimeout(smooth, slideshowFrequency);
 	}
 }
