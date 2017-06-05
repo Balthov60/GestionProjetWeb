@@ -42,6 +42,9 @@ $(document).ready(function()
 		{
 		var linkHref = $(this).attr('href');
 
+		var menu = $('#menu');
+		alert(menu);
+
 		var height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
 		if (height < 0)
 			height = 0;
