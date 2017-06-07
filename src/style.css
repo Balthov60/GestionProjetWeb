@@ -327,7 +327,6 @@ header .main_navigation
 .menu_text
 {
   position: relative;
-
   height: 550px;
 
 
@@ -357,11 +356,29 @@ header .main_navigation
   margin: 2px 0px;
 }
 
+.ornement
+{
+  width: 27%;
+  height: auto;
+  position: absolute;
+  top:0%;
+}
+
+
+#leftOrnement
+{
+  left: 0%;
+}
+
+#rightOrnement
+{
+  right: 0%;
+}
+
 .arrow
 {
   width: 8%;
   height: auto;
-
   position: absolute;
   top: 50%;
 }

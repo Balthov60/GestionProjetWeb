@@ -79,8 +79,12 @@
         </nav>
 
         <div class="menu_text vertical_layout">
+          
           <div class="text_padding">
+          
             <h2 class="start_course"><?php echo ENTREE ?></h2>
+            <img src="images/menu/leftOrnement.png"  id="leftOrnement"  class="ornement" />             
+          <img src="images/menu/rightOrnement.png"  id="rightOrnement"  class="ornement" /> 
             <ul class="vertical_layout menuDisplayer" id="startCourse_Displayer">
               <li>Chargement..</li>
             </ul>
