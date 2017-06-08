@@ -18,8 +18,10 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" media="all and (min-width: 1080px)" href="classic_big.css" />
     <link rel="stylesheet" media="all and (max-width: 1080px)" href="small_medium.css" />
+
 
   </head>
 
@@ -174,7 +176,13 @@
             
             <div class="validation">
               <p><?php echo RESERVATION_PLUS_5PERSONNES ?></p>
-              <input type="button" class="button" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+              <input type="button" class="button btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+
+              <!-- Modal -->
+              <div id="modal_container">
+                
+              </div>
+          
             </div>
           </div>
         </form>
@@ -235,6 +243,7 @@
     <!-- <script src="js/personnalizeAlertBox.js"></script> -->
     <script src="js/ajaxSubmitForm.js"></script>
     <script src="js/dailyMenuRead.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
 
 
 

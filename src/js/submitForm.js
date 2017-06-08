@@ -39,7 +39,9 @@ function submitForm() {
     /* Test Data */
     var date = form.date.value;
     if (!testDate(date))
+    {
     	return;
+    }
 
    	var qty = form.number.value;
    	if (!testQty(qty))
@@ -47,7 +49,9 @@ function submitForm() {
 
     var lastName = form.lastname.value;
     if (!testName(lastName))
-    	return;
+    {
+      return;
+    }
 
     var firstName = form.firstname.value;
     if (!testName(firstName))
@@ -82,43 +86,67 @@ function submitForm() {
     alert(testField);
 }
 
+
+function launchModal(title, expression)
+{
+  $('#modal_container').html("<div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><img src=\"images/logos/logo.png\" id=\"logoModal\"/><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" +  title + "</h4></div><div class=\"modal-body\">" + expression + "</div></div></div></div>");
+}
+
+function destroyModal()
+{
+  $('#modal_container').html("");
+}
+
+
 function testDate(value) {
     var patt = new RegExp('^((0?[1-9])|([12][0-9])|(3[0-1]))[-/](0?[1-9]|1[0-2])$');
+    destroyModal();
    	if (value == "") {
-   		alert("Vous devez renseigner une date.");
+        launchModal("Date non renseignée", "Vous devez renseigner une date.")
+     		//alert("Vous devez renseigner une date.");
    		return false;
    	}
    	else if (!patt.test(value)) {
-   		alert("Format de la date non valide : dd/mm");
+      launchModal("Date non valide", "Vous devez renseigner une date au format suivant : dd/mm.")
+   		//alert("Format de la date non valide : dd/mm");
    		return false;
    	}
    	return true;
 }
 
 function testQty(value) {
+  destroyModal();
 	if (value == "") {
-   		alert("Vous devez renseigner un nombre de personne.");
+      launchModal("Nombre de personne non renseigné", "Vous devez renseigner un nombre de personne.")
+   		//alert("Vous devez renseigner un nombre de personne.");
    		return false;
    	}
    	else if (value > 5) {
-   		alert("Pour les invitations de plus de 5 personnes veuillez nous contacter par téléphone.");
+      launchModal("Nombre de personne trop important", "Pour les invitations de plus de 5 personnes veuillez nous contacter par téléphone.")
+   		//alert("Pour les invitations de plus de 5 personnes veuillez nous contacter par téléphone.");
    		return false;
    	}
    	else if (value <= 0) {
-   		alert("Le nombre de personne minimum est 1.");
+      launchModal("Nombre de personne non nul", "Le nombre de personne minimum est 1.")
+   		//alert("Le nombre de personne minimum est 1.");
    		return false;
    	}
    	return true;
 }
 
+
+
 function testName(value) {
 	var patt = new RegExp('^([éàèëïêîA-Za-z \-]*)$');
+  destroyModal();
 	if (value == "") {
-		alert("Vous devez renseigner un nom et un prenom.");
+    launchModal("Nom et prénom non renseignés", "Vous devez renseigner un nom et un prenom.")
+		//alert("Vous devez renseigner un nom et un prenom.");
 		return false;
 	}
 	else if (!patt.test(value)) {
-		alert("Format du nom ou prenom non valide.");
+    launchModal("Format non valide", "Vous devez renseigner un nom et un prenom valide.")
+		//alert("Format du nom ou prenom non valide.");
 		return false;
 	}
 	return true;
@@ -126,12 +154,15 @@ function testName(value) {
 
 function testMail(value) {
   var patt = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;	
+  destroyModal();
   if (value == "") {
-		alert("Vous devez renseigner une adresse mail.");
+    launchModal("Mail non renseignée", "Vous devez renseigner une adresse mail.")
+		//alert("Vous devez renseigner une adresse mail.");
 		return false;
 	}
 	else if (!patt.test(value)) {
-		alert("Format du mail non valide.");
+    launchModal("Mail non valide", "Vous devez renseigner une adresse mail valide.")
+		//alert("Format du mail non valide.");
 		return false;
 	}
 	return true;
@@ -140,11 +171,13 @@ function testMail(value) {
 function testPhone(value) {
   var patt = /^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/;	
   if (value == "") {
-		alert("Vous devez renseigner un numéro de téléphone.");
+    launchModal("Telephone non renseigné", "Vous devez renseigner un numero de téléphone.")
+		//alert("Vous devez renseigner un numéro de téléphone.");
 		return false;
 	}
 	else if (!patt.test(value)) {
-		alert("Numéro de téléphone non valide.");
+    launchModal("Telephone non valide", "Vous devez renseigner un numero de téléphone valide.")
+		//alert("Numéro de téléphone non valide.");
 		return false;
 	}
 	return true;
