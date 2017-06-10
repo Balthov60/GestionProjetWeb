@@ -27,7 +27,9 @@
 
   <body>
     <div id="main_content">
-      <header class="horizontal_layout small_vertical">
+      <div id="fake_header">
+      </div>
+      <header class="horizontal_layout small_vertical" id="header">
         <div class="title horizontal_layout">
           <img src="images/logos/logo.png" alt="Logo restaurant"/>
           <h1><?php echo RESTAURANT_ADRETS ?></h1>

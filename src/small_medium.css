@@ -148,6 +148,24 @@ section
 /* Header */
 /**********/
 
+#fake_header
+{
+	display: block;
+	background-color: #333333;
+}
+
+header
+{
+  position: fixed;
+  border-bottom: 5px solid;
+  border-top: 5px solid;
+  border-color: #333333;
+  z-index: 100;
+  width: 95%;
+  top: 0px;
+  left: 1%;
+}
+
 .title
 {
   margin-right: 20px;

@@ -112,6 +112,11 @@ fieldset
   opacity: 0;
 }
 
+#fake_header
+{
+  display: none;
+}
+
 /**********/
 /* Cursor */
 /**********/

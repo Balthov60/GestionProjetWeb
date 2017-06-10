@@ -67,6 +67,8 @@ $(document).ready(function()
 			height = $(linkHref).offset().top - ("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight) / 2;
 		}
 
+		height -= headerSize;
+
 		if (height < 0)
 			height = 0;
 
@@ -80,6 +82,7 @@ $(document).ready(function()
 
 /* Replace button while resizing */
 document.getElementsByTagName("BODY")[0].onresize = function() { placeAside() };
+var headerSize = 0;
 placeAside();
 
 /***********************/
@@ -101,4 +104,21 @@ function placeAside() {
 
 	asideNavigation.style.top = top + 'px';
 	asideNavigation.style.left = left + 'px';
+
+	var width = "innerWidth" in window ? window.innerWidth : document.documentElement.offsetWidth
+	if (width < 1080) {
+		var left = width;
+
+		var height = document.getElementById("header").offsetHeight;
+		height = height - 20;
+		document.getElementById("fake_header").style.height = height + 'px';
+
+		width = "innerWidth" in window ? window.clientWidth : document.documentElement.clientWidth
+		document.getElementById("header").style.width = width + 'px';
+
+	    headerSize = height + 20;
+	}
+	else {
+		headerSize = 0;
+	}
 }
