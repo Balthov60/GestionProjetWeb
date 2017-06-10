@@ -132,7 +132,7 @@
             <legend><?php echo RESERVATION ?></legend>
             
             <label><?php echo DATE_HEURE ?></label>
-            <input placeholder="dd/mm" type="date" id="date" name="date"/>
+            <input placeholder="dd/mm" type="textarea" id="date" name="date"/>
 
             <select name="hour" id="hour">
               <optgroup label="Déjeuner :">
@@ -234,32 +234,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Homemade Java Script -->
     <script src="js/smoothScrolling.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
-    <!-- <script src="js/personnalizeAlertBox.js"></script> -->
+    <script src="js/submitForm.js"></script>
     <script src="js/ajaxSubmitForm.js"></script>
-    <script src="js/dailyMenuRead.js"></script> 
-    <script src="js/bootstrap.min.js"></script>
-
-
-
-
+    <script src="js/dailyMenuRead.js"></script>
 
     <!-- PHP -->
     <?php include './php/arrowsSwitchingMeals.php'; ?>
     <?php include './php/arrowsSwitchingMenus.php'; ?>
-
-
-
-    <script src="js/submitForm.js"></script>
-
-    <script src="js/submitForm.js"></script>
-
-    <script src="js/submitForm.js"></script>
 
   </body>
 </html>

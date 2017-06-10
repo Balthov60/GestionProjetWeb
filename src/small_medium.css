@@ -32,12 +32,12 @@
 {
   h1
   {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   
   h2
   {
-    font-size: 1.4em;
+    font-size: 1.7em;
   }
   
   a
@@ -48,14 +48,19 @@
 
 @media all and (min-width:675px) and (max-width:700px) 
 {
-  h1, h2
+  h1
   {
-    font-size: 1.3em;
+    font-size: 1.7em;
+  }
+
+  h2
+  {
+  	font-size: 1.6em;
   }
   
   a
   {
-	font-size: 0.9em;
+	font-size: 0.8em;
   }
 }
 
@@ -116,7 +121,7 @@
   }
 }
 
-@media all and (max-width:400px) 
+@media all and (max-width:500px) 
 {
   .very_small_vertical
   {
@@ -146,6 +151,11 @@ section
 .title
 {
   margin-right: 20px;
+}
+
+.title h1
+{
+  white-space: nowrap;
 }
 
 
@@ -216,6 +226,15 @@ section
   margin-bottom: 20px;
 }
 
+@media all and (max-width:400px) 
+{
+	.menu nav
+	{
+	  width: 80%;
+	  margin-bottom: 20px;
+	}
+}
+
 .menu_text
 {
   /*width: 350px;*/
@@ -233,11 +252,15 @@ section
   width: 100%;
 }
 
-@media all and (min-width:400px) 
+@media all and (min-width:500px) 
 {
-  .details
+  .validation
   {
     margin: auto;
+  }
+  .details
+  {
+  	margin-right: 10px;
   }
 }
 
