@@ -113,9 +113,6 @@ function placeAside() {
 		height = height - 20;
 		document.getElementById("fake_header").style.height = height + 'px';
 
-		width = "innerWidth" in window ? window.clientWidth : document.documentElement.clientWidth
-		document.getElementById("header").style.width = width + 'px';
-
 	    headerSize = height + 20;
 	}
 	else {
