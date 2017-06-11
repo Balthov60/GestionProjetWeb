@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (https://getbootstrap.com/customize/?id=832da26cf7ac263214dc16e3e2ea1f88)
- * Config saved to config.json and https://gist.github.com/832da26cf7ac263214dc16e3e2ea1f88
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=e144e790681b3d6956f0a577d8682db5)
+ * Config saved to config.json and https://gist.github.com/e144e790681b3d6956f0a577d8682db5
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -15,14 +15,81 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-
-/***********************/
-/**** Close Button ****/
-/*********************/
-
-
-[role="button"] {
-  cursor: pointer;
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.alert .alert-link {
+  font-weight: bold;
+}
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+.alert > p + p {
+  margin-top: 5px;
+}
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  margin:auto 0;
+}
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+.alert-success .alert-link {
+  color: #2b542c;
+}
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+.alert-info hr {
+  border-top-color: #a6e1ec;
+}
+.alert-info .alert-link {
+  color: #245269;
+}
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+.alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+.alert-warning .alert-link {
+  color: #66512c;
+}
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+.alert-danger .alert-link {
+  color: #843534;
 }
 .close {
   float: right;
@@ -49,17 +116,9 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-
-
-
-/****************/
-/**** Modal ****/
-/***************/
-
 .modal-open {
-  overflow: auto;
+  overflow: hidden;
 }
-
 .modal {
   display: none;
   overflow: hidden;
@@ -72,16 +131,6 @@ button.close {
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
-
-#logoModal
-{
-  position: absolute;
-  left:7%;
-  top:11%;
-  width: 10%;
-  height: auto;
-}
-
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
@@ -98,7 +147,7 @@ button.close {
   transform: translate(0, 0);
 }
 .modal-open .modal {
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .modal-dialog {
@@ -110,8 +159,8 @@ button.close {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #C59D5F;
-  border: 1px solid rgba(197, 157, 95, 0.2);
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   -webkit-background-clip: padding-box;
@@ -125,7 +174,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #1E1E1E;
+  background-color: #000000;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -133,7 +182,7 @@ button.close {
 }
 .modal-backdrop.in {
   opacity: 0.5;
-  filter: alpha(opacity=70);
+  filter: alpha(opacity=50);
 }
 .modal-header {
   padding: 15px;
@@ -149,11 +198,20 @@ button.close {
 .modal-body {
   position: relative;
   padding: 15px;
+  padding-bottom: 20px; 
+  text-align: left;
+}
+
+.modal-body-recapMail {
+  position: relative;
+  padding: 15px;
+  padding-bottom: 100px; 
+  text-align: left;
 }
 .modal-footer {
   padding: 15px;
   text-align: right;
-  border-top: 1px solid #C59D5F;
+  border-top: 1px solid #e5e5e5;
 }
 .modal-footer .btn + .btn {
   margin-left: 5px;
@@ -170,11 +228,26 @@ button.close {
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: auto;
+  overflow: scroll;
 }
+
+.sendMail_Button
+{
+  width: 25%;
+  position: absolute;
+  bottom: 5%;
+  right: 35%;
+}
+
+.recapMailText
+{
+  position: relative;
+  padding-bottom: 10px; 
+}
+
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 400px;
+    width: 600px;
     margin: 30px auto;
   }
   .modal-content {
@@ -187,7 +260,7 @@ button.close {
 }
 @media (min-width: 992px) {
   .modal-lg {
-    width: 600px;
+    width: 900px;
   }
 }
 .clearfix:before,

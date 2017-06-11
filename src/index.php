@@ -178,10 +178,18 @@
             
             <div class="validation">
               <p><?php echo RESERVATION_PLUS_5PERSONNES ?></p>
-              <input type="button" class="button btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+              <input type="button" class="button btn btn-primary btn-lg" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
 
               <!-- Modal -->
-              <div id="modal_container">
+              <div id="modalSentMail_container">
+                
+              </div>
+
+              <div id="modalRecapMail_container">
+                
+              </div>
+
+              <div id="modalAlertMail_container">
                 
               </div>
           
