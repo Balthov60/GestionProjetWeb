@@ -83,6 +83,7 @@ $(document).ready(function()
 /* Replace button while resizing */
 document.getElementsByTagName("BODY")[0].onresize = function() { placeAside() };
 var headerSize = 0;
+
 placeAside();
 
 /***********************/
