@@ -35,6 +35,8 @@
     {
         if(isset($_GET['lang']))
             return $_GET['lang'];
+        else 
+            return 'fr';
     }  
 ?>
 

@@ -178,7 +178,7 @@
             
             <div class="validation">
               <p><?php echo RESERVATION_PLUS_5PERSONNES ?></p>
-              <input type="button" class="button btn btn-primary btn-lg" onclick="submitForm()" value="<?php echo ENVOYER_RESERVATION ?>" />
+              <input type="button" class="button btn btn-primary btn-lg" id="sendButton" value="<?php echo ENVOYER_RESERVATION ?>" />
 
               <!-- Modal -->
               <div id="modalSentMail_container">
@@ -251,13 +251,14 @@
     <script src="js/slideshow.js"></script>
     <script src="js/asideNavigation.js"></script>
     <script src="js/menuNavigation.js"></script>
-    <script src="js/submitForm.js"></script>
     <script src="js/ajaxSubmitForm.js"></script>
     <script src="js/dailyMenuRead.js"></script>
 
     <!-- PHP -->
     <?php include './php/arrowsSwitchingMeals.php'; ?>
     <?php include './php/arrowsSwitchingMenus.php'; ?>
+    <?php include './php/submitForm.php'; ?>
+
 
   </body>
 </html>
