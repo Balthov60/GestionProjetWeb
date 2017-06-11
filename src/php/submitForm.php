@@ -140,10 +140,10 @@ function launchModal_MailSent()
 function launchModalRecap(title, expression)
 {
   if(lang == 'fr')
-    var buttonText = "Envoyer le mail";
+    var buttonText = "Envoyer";
 
   else
-    var buttonText = "Send e-mail";
+    var buttonText = "Send";
 
   $('#modalRecapMail_container').html("<div class=\"modal fade\" id=\"modalRecapMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" +  title + "</h4></div><div class=\"modal-body-recapMail\">" + expression + "<input type=\"button\" class=\"sendMail_Button\" data-dismiss=\"modal\" aria-hidden=\"true\" value = \"" + buttonText + "\"/></div></div></div></div>");
   $('#modalRecapMail').modal();
