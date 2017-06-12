@@ -143,7 +143,7 @@ function launchModal_MailNotSent()
     var titre = "E-mail not sent";
   }
 
-  $('#modalSentMail_container').html("<div class=\"modal fade\" id=\"modalSentMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" + titre + "</h4></div><div class=\"modal-body\"><div class=\"alert alert-success\">" + failed + "</div></div></div></div></div>");
+  $('#modalSentMail_container').html("<div class=\"modal fade\" id=\"modalSentMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" + titre + "</h4></div><div class=\"modal-body\"><div class=\"alert alert-danger\">" + failed + "</div></div></div></div></div>");
   $('#modalSentMail').modal();
 }
 
@@ -198,8 +198,6 @@ function launchAlertModal(title, expression)
   $('#modalAlertMail_container').html("<div class=\"modal fade\" id=\"modalAlertMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" +  title + "</h4></div><div class=\"modal-body\">" + expression + "</div></div></div></div>");  
   $('#modalAlertMail').modal();
 }
-
-
 
 
 function testDate(value, lang) {
