@@ -6,10 +6,9 @@ $(document).ready(function(){
   $('#sendButton').click(function(){
     var lang = "<?php echo getLanguage(); ?>";
     submitForm(lang);
-  })
-  $('#modalRecapMail_container').on('hidden.bs.modal', function () {
-    launchModal_MailSent();
   });
+
+  var request;
 })
 
 function getXMLHttpRequest() { 
@@ -81,7 +80,9 @@ function submitForm(lang) {
    	var hour = form.hour.value;
    	var commentary = form.text.value;
 
-   	// Confirmation du mail ? amélioration possible, à garder.
+   	/* Format Request */
+    request = "php/sendMail.php?date=" + date + "&hour=" + hour + "&qty=" + qty + "&lastName=" + lastName + "&firstName=" + firstName + "&email=" + email + "&tel=" + tel + "&commentary=" + commentary;
+
    	/* Format Message */ 
     if(lang=='fr')
     {      
@@ -107,16 +108,7 @@ function submitForm(lang) {
       launchModalRecap("Confirmation de l'envoie du mail", messageConfirm);   
 
     else
-      launchModalRecap("Booking confirmation", messageConfirm);   
-
-
-
-    /* Format Request */
-    var request = "php/sendMail.php?date=" + date + "&hour=" + hour + "&qty=" + qty + "&lastName=" + lastName + "&firstName=" + firstName + "&email=" + email + "&tel=" + tel + "&commentary=" + commentary;
-
-    /* Send Mail */
-    var testField = sendMail(request);
-    
+      launchModalRecap("Booking confirmation", messageConfirm);       
 }
 
 function launchModal_MailSent()
@@ -137,6 +129,42 @@ function launchModal_MailSent()
   $('#modalSentMail').modal();
 }
 
+function launchModal_MailNotSent()
+{
+  if (lang == 'fr')
+  {
+    var failed = "<strong>Oups!</strong> Suite à un problème technique le mail n'a pas été envoyé... Veuillez réessayer plus tard!."
+    var titre = "Mail non envoyé";
+  }
+
+  else
+  {
+    var failed = "<strong>Failed!</strong> Sorry we can't send your e-mail, please try again later!"
+    var titre = "E-mail not sent";
+  }
+
+  $('#modalSentMail_container').html("<div class=\"modal fade\" id=\"modalSentMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" + titre + "</h4></div><div class=\"modal-body\"><div class=\"alert alert-success\">" + failed + "</div></div></div></div></div>");
+  $('#modalSentMail').modal();
+}
+
+function launchModal_MailCancel()
+{
+  if (lang == 'fr')
+  {
+    var failed = "Vous avez bien annulé l'envoi de mail."
+    var titre = "Mail non envoyé";
+  }
+
+  else
+  {
+    var failed = "You have cancel the form submission."
+    var titre = "E-mail not sent";
+  }
+
+  $('#modalSentMail_container').html("<div class=\"modal fade\" id=\"modalSentMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" + titre + "</h4></div><div class=\"modal-body\"><div class=\"alert alert-success\">" + failed + "</div></div></div></div></div>");
+  $('#modalSentMail').modal();
+}
+
 function launchModalRecap(title, expression)
 {
   if(lang == 'fr')
@@ -145,7 +173,22 @@ function launchModalRecap(title, expression)
   else
     var buttonText = "Send";
 
-  $('#modalRecapMail_container').html("<div class=\"modal fade\" id=\"modalRecapMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" +  title + "</h4></div><div class=\"modal-body-recapMail\">" + expression + "<input type=\"button\" class=\"sendMail_Button\" data-dismiss=\"modal\" aria-hidden=\"true\" value = \"" + buttonText + "\"/></div></div></div></div>");
+  $('#modalRecapMail_container').html("<div class=\"modal fade\" id=\"modalRecapMail\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" id=\"cancelMail\" aria-hidden=\"true\">&times;</button><h4 class=\"modal-title\" id=\"myModalLabel\">" +  title + "</h4></div><div class=\"modal-body-recapMail\">" + expression + "<input type=\"button\" class=\"sendMail_Button\" id=\"sendMail\" data-dismiss=\"modal\" aria-hidden=\"true\" value = \"" + buttonText + "\"/></div></div></div></div>");
+  
+  $('#sendMail').click(function() {
+  	var testField = sendMail(request);
+  	if (testField == "send") {
+  	  launchModal_MailSent(); 
+  	}
+  	else {
+      launchModal_MailNoSent();
+  	}
+  });
+
+  $('#cancelMail').click(function() {
+    launchModal_MailCancel();
+  });
+
   $('#modalRecapMail').modal();
 
 }
